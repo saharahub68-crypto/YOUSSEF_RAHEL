@@ -1,0 +1,25 @@
+PORTFOLIO — YOUSSEF RAHEL
+=========================
+
+Contenu
+- index.html  : le site complet (une seule page, AR / FR / EN)
+- img/        : les 8 photos utilisees par la page (garder ce dossier a cote de index.html)
+- CV-Youssef-Rahel.pdf : le CV
+
+Ouvrir en local
+Ne pas ouvrir index.html par double-clic : l'effet du portrait a besoin d'un petit serveur.
+Dans ce dossier :  python3 -m http.server 8000   puis ouvrir http://localhost:8000
+
+Mettre en ligne (gratuit)
+- Netlify Drop (app.netlify.com/drop) : glisser le dossier entier.
+- GitHub Pages / Vercel : deposer le contenu du dossier tel quel.
+
+Bouton CV
+Une fois en ligne, on peut ajouter un lien de telechargement vers CV-Youssef-Rahel.pdf
+(impossible dans l'apercu Claude, mais possible sur votre propre hebergement).
+
+Polices (Google Fonts) et Lenis (defilement doux) se chargent depuis Internet.
+
+---
+طريقة الفتح: لا تفتح index.html بالنقر المزدوج. شغّل في المجلد: python3 -m http.server 8000 ثم افتح http://localhost:8000
+للنشر مجاناً: اسحب المجلد كاملاً إلى app.netlify.com/drop

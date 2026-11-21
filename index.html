@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Youssef Rahel — Social entrepreneur</title>
+<meta name="description" content="Youssef Rahel — social entrepreneur from Smara, Morocco. Founder of SAHARAHUB SARLAU, Morocco Youth Award 2024 laureate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Space+Grotesk:wght@400;500;700&family=Readex+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE   confident, field-tested, quiet pride — a driver-style profile for a social entrepreneur
+IDEA    the Kimi/GRID01 race site, re-raced: a season sheet where the circuit is the road Smara → Rabat → Sahara
+PICTURE the cut-out portrait over rolling contour lines; a "data" halftone of him burns away and comes back under the cursor
+COLOUR  Ice ground, Nuit #0B1026 panels, SAHARAHUB Bleu Data #3B5BFF on light, Orange Sahara #FF7A30 on dark
+TYPE    Oswald 700 for names/figures, Space Grotesk for everything spoken; Readex Pro carries Arabic
+*/
+:root{
+  --background:#f5f6fa; --surface-muted:#eceef5; --surface-soft:#e2e5ef; --border-muted:#dcdfea;
+  --foreground:#0b1026; --foreground-muted:rgb(11 16 38 / .42);
+  --surface-black:#0b1026; --surface-raised:#151b3a; --border-on-dark:#262d52;
+  --on-dark:#fff; --on-dark-muted:#aab1cc; --on-dark-faint:rgb(255 255 255 / .42);
+  --blue:#3b5bff; --blue-light:#6e86ff; --accent:#ff7a30; --accent-deep:#c2410c; --sun:#ffc94d;
+  --map-dot:#3a4269; --map-grid:#2c3458; --map-ghost:#1a2044;
+  --plate-outline:#3a4166; --plate-fill:rgb(255 255 255 / .06); --rail:rgb(255 255 255 / .2);
+  --ease-entrance:cubic-bezier(.2,0,0,1); --ease-plate:cubic-bezier(.33,0,0,1);
+  --font-sans:"Space Grotesk",system-ui,sans-serif; --font-display:"Oswald",Impact,sans-serif;
+  --gutter:clamp(20px,2.2222vw,40px);
+  color-scheme:light;
+}
+html[lang=ar]{--font-sans:"Readex Pro","Space Grotesk",system-ui,sans-serif;--font-display:"Readex Pro",sans-serif}
+*{box-sizing:border-box;min-width:0}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--font-sans);overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+img{display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.up{text-transform:uppercase}
+html[lang=ar] .up{text-transform:none}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--accent)}
+.disp{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:.95}
+html[lang=ar] .disp{line-height:1.2;text-transform:none}
+
+/* reveal units */
+.rv{display:flex;flex-wrap:wrap;column-gap:.3em}
+.rv .u{display:inline-block;opacity:0;transform:translateY(.35em);will-change:transform,opacity}
+.rv .w{display:inline-flex;white-space:nowrap}
+.rise{opacity:0;transform:translateY(.75rem)}
+.no-motion .rv .u,.no-motion .rise{opacity:1!important;transform:none!important}
+
+/* ── stack ───────────────────────── */
+.stack{position:relative;background:var(--surface-black)}
+.layer{position:sticky;top:0;z-index:0}
+.layer.l2{z-index:10}
+.layer.last{position:relative;z-index:20}
+.inner{transform-origin:center}
+.shade{position:absolute;inset:0;background:var(--surface-black);opacity:0;pointer-events:none}
+@media (max-width:639px){.layer{position:relative}}
+
+/* ── veil ───────────────────────── */
+#veil{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--background)}
+#veil .vc{display:flex;flex-direction:column;align-items:center}
+#veil .sil{position:relative;width:9rem;height:8.4rem;-webkit-mask:url(img/portrait.webp) center/contain no-repeat;mask:url(img/portrait.webp) center/contain no-repeat}
+#veil .sil i{position:absolute;inset:0;background:var(--foreground)}
+#veil .sil i:first-child{opacity:.12}
+#veil .sil i:last-child{transform-origin:top;transform:scaleY(0)}
+#veil .vn{margin-top:1.75rem;font-size:1.125rem;letter-spacing:.18em;line-height:.9;opacity:0}
+html[lang=ar] #veil .vn{letter-spacing:0}
+#veil .meter{position:absolute;inset-inline:0;bottom:0;height:4px;background:var(--border-muted)}
+#veil .meter i{position:absolute;inset:0;background:var(--blue);transform-origin:left;transform:scaleX(0)}
+
+/* ── hero ───────────────────────── */
+#hero{position:relative;isolation:isolate;min-height:100lvh;overflow:hidden;background:var(--background)}
+#hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#hero .ramp{position:absolute;inset-inline:0;bottom:0;height:24%;z-index:5;pointer-events:none;
+  background:linear-gradient(to bottom,rgb(245 246 250/0) 0%,rgb(245 246 250/.06) 26%,rgb(245 246 250/.2) 46%,rgb(245 246 250/.45) 64%,rgb(245 246 250/.74) 80%,rgb(245 246 250/.93) 91%,var(--background))}
+.hcol{position:relative;z-index:10;min-height:100lvh;display:flex;flex-direction:column;padding:1.5rem var(--gutter)}
+header.mast{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:30;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1rem;letter-spacing:-.01em}
+.logo svg{width:1.6rem;height:1.6rem}
+.logo b{font-family:"Oswald";font-size:1.25rem;letter-spacing:.02em}
+nav.prim{position:absolute;left:50%;transform:translateX(-50%)}
+nav.prim ul{display:flex;gap:3rem;list-style:none;margin:0;padding:0}
+nav.prim a,.lnk{font-size:1rem;line-height:.9;transition:color 150ms var(--ease-entrance)}
+nav.prim a:hover,.lnk:hover{color:var(--blue)}
+.mright{display:flex;align-items:center;gap:1.75rem}
+.langs{display:flex;gap:.15rem;font-size:.875rem;font-weight:500}
+.langs button{padding:.4rem .45rem;line-height:1;border-radius:2px;color:var(--foreground-muted)}
+.langs button[aria-pressed=true]{color:var(--foreground);box-shadow:inset 0 -2px 0 var(--blue)}
+.langs button:hover{color:var(--foreground)}
+.dark .langs button{color:var(--on-dark-muted)}
+.br{font-weight:700}
+.br span{color:var(--blue)}
+.burger{display:none;padding:.5rem;margin-inline-end:-.5rem}
+.burger i{display:block;width:1.5rem;height:1px;background:var(--foreground)}
+.burger i+i{margin-top:.3125rem}
+.hmid{flex:1;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:2rem 0}
+.ident{max-width:30rem;position:relative}
+.ident .id{font-size:1rem;color:var(--foreground-muted);margin-bottom:1rem;line-height:.9}
+h1.name{margin:0;font-size:6rem;max-width:6em;font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:.95}
+html[lang=ar] h1.name{font-size:5.4rem;line-height:1.15}
+.meta{list-style:none;margin:5rem 0 0;padding:0;display:flex;flex-direction:column;gap:1rem}
+.meta li{display:flex;align-items:center;gap:.6rem;font-size:1.125rem;line-height:.9}
+html[lang=ar] .meta li{line-height:1.2}
+.meta svg{width:1.125rem;height:1.125rem;flex:none}
+.panels{width:16rem;display:flex;flex-direction:column;gap:2rem}
+.bp{position:relative;padding:1rem}
+.bp .c{position:absolute;width:.625rem;height:.625rem;color:var(--foreground)}
+.bp .c svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor}
+.c.tr{top:0;right:0}.c.tl{top:0;left:0;transform:scaleX(-1)}.c.bl{bottom:0;left:0;transform:scale(-1)}.c.brc{bottom:0;right:0;transform:scaleY(-1)}
+.eyebrow{font-size:.75rem;font-weight:500;line-height:.9;letter-spacing:-.02em;color:var(--blue)}
+html[lang=ar] .eyebrow{letter-spacing:0;line-height:1.3}
+.bp dl{margin:1rem 0 0;display:flex;flex-direction:column;gap:.45rem;font-size:.875rem;line-height:1.05}
+.bp dt{font-weight:700}.bp dd{margin:0}
+.award{display:flex;justify-content:space-between;align-items:flex-end;gap:.75rem}
+.award svg{width:3rem;height:3.4rem;flex:none;color:var(--blue)}
+.stats{margin-top:1.5rem!important;display:grid!important;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:.75rem!important;flex-direction:row!important}
+.stats div{display:flex;flex-direction:column;gap:.7rem}
+.stats dt{font-size:.6875rem;letter-spacing:-.04em;white-space:nowrap;font-weight:400;order:2;color:var(--foreground-muted)}
+html[lang=ar] .stats dt{letter-spacing:0}
+.stats dd{font-family:"Oswald";font-weight:500;font-size:2.375rem;line-height:.72;letter-spacing:-.06em;order:1}
+.hact{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:2rem;margin-top:.5rem}
+.trail{display:flex;align-items:center;gap:.75rem;font-size:.875rem;line-height:.9}
+html[lang=ar] .trail{line-height:1.25}
+.trail svg{width:2rem;height:2rem;flex:none}
+.trail b{font-weight:500;display:block;margin-bottom:.375rem}
+.trail:hover b{color:var(--blue)}
+.trail small{font-size:.875rem;color:var(--foreground-muted)}
+.socials{display:flex;justify-content:flex-end;gap:2.5rem;font-size:.875rem}
+.socials a:hover{color:var(--blue)}
+
+/* chamfer button */
+.cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:1.4em;height:2.5em;width:11em;font-size:1.25rem;line-height:.9;color:var(--accent)}
+.cta svg.fr{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cta .body{fill:var(--surface-black)}
+.cta .flood{fill:var(--accent);transform-box:fill-box;transform-origin:left;transform:scaleX(0);transition:transform 250ms var(--ease-plate)}
+html[dir=rtl] .cta .flood{transform-origin:right}
+.cta .ring{fill:none;stroke:var(--accent);stroke-opacity:.25;vector-effect:non-scaling-stroke}
+.cta .brk{fill:none;stroke:var(--accent);vector-effect:non-scaling-stroke}
+.cta .lab{position:relative;transition:color 250ms}
+.cta .arr{position:relative;width:.65em;height:.5em;fill:none;stroke:currentColor;transition:transform 150ms}
+html[dir=rtl] .cta .arr{transform:scaleX(-1)}
+.cta:hover .flood{transform:scaleX(1)}
+.cta:hover{color:var(--surface-black)}
+.cta:hover .arr{transform:translateX(.25rem)}
+html[dir=rtl] .cta:hover .arr{transform:scaleX(-1) translateX(.25rem)}
+.cta.hollow .body{fill:var(--surface-black);stroke:var(--accent);vector-effect:non-scaling-stroke}
+
+/* sheet */
+#sheet{position:fixed;inset:0;z-index:70;background:var(--background);padding:1.5rem 2rem;display:none;flex-direction:column;opacity:0}
+#sheet.open{display:flex}
+#sheet .top{display:flex;justify-content:space-between;align-items:center}
+#sheet .x{width:2.5rem;height:2.5rem;position:relative}
+#sheet .x i{position:absolute;left:.5rem;right:.5rem;top:50%;height:1px;background:var(--foreground);transform:rotate(45deg)}
+#sheet .x i+i{transform:rotate(-45deg)}
+#sheet nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:1.25rem}
+#sheet nav a{font-family:var(--font-display);font-weight:700;font-size:2.6rem;text-transform:uppercase;line-height:.95;opacity:0;transform:translateY(.75rem)}
+#sheet nav a:hover{color:var(--blue)}
+#sheet .langs{font-size:1rem;margin-top:1rem}
+
+/* ── chequer seam ───────────────────────── */
+.seam{position:absolute;inset-inline:0;top:0;height:34svh;pointer-events:none;z-index:10;width:100%}
+
+/* ── impact ───────────────────────── */
+.dark{background:var(--surface-black);color:var(--on-dark)}
+#impact{position:relative;isolation:isolate;min-height:100lvh;overflow:hidden}
+#impact .stage{position:absolute;inset:0;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 90%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 90%,transparent 100%)}
+#impact .stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.icol{position:relative;z-index:20;min-height:100lvh;display:flex;flex-direction:column;justify-content:space-between;gap:4rem;padding:4.8611vw var(--gutter) var(--gutter);pointer-events:none}
+.icol a,.icol button{pointer-events:auto}
+.h2{margin:0;font-size:max(3.8194vw,40px);color:var(--accent)}
+.h2 .stop{color:var(--on-dark)}
+.rule{width:24px;height:2px;background:var(--accent);margin-top:28px;transform-origin:left;transform:scaleX(0)}
+html[dir=rtl] .rule{transform-origin:right}
+.intro{margin-top:30px;width:max(16.5vw,15rem);font-size:max(1.25vw,17px);line-height:1.1}
+html[lang=ar] .intro{line-height:1.45}
+.plate{align-self:flex-end;position:relative;width:max(25vw,340px);height:max(6vw,88px);display:grid;grid-template-columns:27% 1fr}
+.plate>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.plate .pf{fill:var(--surface-black);stroke:var(--accent);vector-effect:non-scaling-stroke}
+.plate .badge{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;font-size:max(.8333vw,12px);line-height:.8}
+.plate .badge svg{width:37px;height:23px;fill:none;stroke:var(--accent)}
+.plate .badge span b{color:var(--accent);font-weight:400}
+.plate dl{position:relative;margin:0;display:flex;flex-direction:column;justify-content:center;gap:.55rem;padding-inline-start:1rem;font-size:max(.9722vw,13px);line-height:.85}
+html[lang=ar] .plate dl{line-height:1.2;gap:.3rem}
+.plate dl div{display:flex;gap:.4em}
+.plate dt{color:var(--accent);min-width:2.2em}.plate dd{margin:0;white-space:nowrap}
+.mapkey{position:absolute;z-index:20;inset-inline-start:var(--gutter);bottom:var(--gutter);font-size:12px;color:var(--on-dark-muted);display:flex;align-items:center;gap:.5rem;line-height:1.2;max-width:22rem}
+.mapkey i{width:8px;height:8px;background:var(--accent);flex:none;transform:rotate(45deg)}
+
+/* ── journey ───────────────────────── */
+#journey{position:relative;isolation:isolate;container-type:inline-size;padding-bottom:10.4167cqw}
+.jwrap{position:relative;padding-top:11.7361cqw}
+#journey .h2{position:absolute;z-index:20;top:var(--gutter);inset-inline-end:var(--gutter);width:max(26cqw,300px);font-size:max(3.8194cqw,40px);display:flex;flex-direction:column;align-items:flex-end;text-align:end}
+#journey .h2 .rv{justify-content:flex-end}
+.railbox{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:1.1111cqw;z-index:10}
+.railbox svg{width:100%;height:100%;overflow:visible}
+.row{position:relative;width:100%;transition:opacity 700ms var(--ease-plate)}
+.row.centre{height:32.0833cqw}.row.side{height:15.0694cqw}
+.rows.dim .row:not(.hot){opacity:.3}
+.pl{position:absolute;top:0;height:100%;}
+.pl .pin{position:absolute;inset:0}
+.row.centre .pl{width:49.3056cqw;left:50%;margin-left:-24.6528cqw}
+.row.side .pl{width:23.125cqw}
+.row.side.r .pl{right:var(--gutter)}.row.side.l .pl{left:var(--gutter)}
+.plate2{position:absolute;inset:0}
+.plate2 .fill{position:absolute;inset:0;overflow:hidden;background:var(--plate-fill);transition:inset 700ms var(--ease-plate)}
+.plate2:hover .fill{inset:5%}
+.plate2 .fill .slot{position:absolute;inset-inline:0;top:0;height:100%}
+.plate2 img{width:100%;height:110%;object-fit:cover}
+.plate2 svg.ol{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--plate-outline);vector-effect:non-scaling-stroke;pointer-events:none}
+.year{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:20;text-shadow:0 2px 22px rgb(11 16 38/.75);pointer-events:none;font-size:max(2.5cqw,30px);color:var(--accent);white-space:nowrap}
+.year .rv{column-gap:0}
+.copy{position:absolute;inset-inline-start:76.3889cqw;top:50%;z-index:20;pointer-events:none;width:max(19cqw,210px);font-size:max(1.1806cqw,15px);line-height:1.12;text-transform:uppercase}
+html[dir=rtl] .copy{inset-inline-start:auto;right:76.3889cqw}
+html[lang=ar] .copy{text-transform:none;line-height:1.5}
+.copy p{margin:0}.copy b{font-weight:700;display:block;margin-bottom:.4em;color:#fff}
+.copy span{color:var(--on-dark-muted)}
+.copy .cin{position:relative}
+.sbadge{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2cqw;background:radial-gradient(120% 90% at 50% 120%,#1b2457,#0b1026 60%)}
+.sbadge .wm{font-family:Poppins,"Space Grotesk",sans-serif;font-weight:700;font-size:6.2cqw;letter-spacing:-.04em;color:#fff;direction:ltr}
+.sbadge .wm span{color:var(--blue-light)}
+.sbadge .lines{display:flex;flex-direction:column;gap:.55cqw;width:30%}
+.sbadge .lines i{display:block;height:.28cqw;background:var(--blue-light);border-radius:2px}
+.sbadge .lines i:nth-child(1){width:40%}.sbadge .lines i:nth-child(2){width:62%}.sbadge .lines i:nth-child(3){width:80%;background:var(--accent)}.sbadge .lines i:nth-child(4){width:100%;background:var(--accent)}
+.cap{position:absolute;inset-inline-start:0;bottom:-1.6em;font-size:12px;color:var(--on-dark-muted);white-space:nowrap}
+
+/* ── field ───────────────────────── */
+#field{position:relative;isolation:isolate;container-type:inline-size;min-height:max(100lvh,55.5cqw);overflow:hidden;background:var(--background)}
+#field canvas.ct{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.band{position:absolute;inset-inline:0;bottom:0;height:11.7361cqw;background:var(--surface-black)}
+.ffig{position:absolute;z-index:10;bottom:0;left:38%;width:42cqw;height:calc(100% - 11.7361cqw - 4cqw);}
+.ffig .pin{position:absolute;inset:0}
+.ffig .plate2 .fill{background:#ccd}
+.ffig .plate2 img{height:110%}
+html[dir=rtl] .ffig{left:auto;right:38%}
+.melt{position:absolute;inset-inline:0;bottom:0;z-index:11;height:calc(11.7361cqw + 6cqw);background:linear-gradient(to bottom,rgb(11 16 38/0) 0%,var(--surface-black) 38.685%);pointer-events:none}
+#field .h2{position:absolute;z-index:20;inset-inline-start:var(--gutter);top:var(--gutter);color:var(--foreground);font-size:max(6.6667cqw,40px)}
+#field .h2 .stop{color:var(--accent)}
+.fintro{position:absolute;z-index:20;inset-inline-start:var(--gutter);bottom:calc(11.7361cqw + 2.2222cqw);width:max(23.4722cqw,280px);display:flex;flex-direction:column;gap:2.7778cqw;align-items:flex-start}
+.fintro p{margin:0;font-size:max(1.25cqw,16px);line-height:1.1;text-transform:uppercase}
+html[lang=ar] .fintro p{text-transform:none;line-height:1.55}
+.fintro .cta{font-size:max(1.3889cqw,16px)}
+.fpanels{position:absolute;z-index:20;inset-inline-end:var(--gutter);top:var(--gutter);width:max(15.1389cqw,210px);display:flex;flex-direction:column;gap:2.2cqw}
+.fpanels .bp dl{margin-top:.75rem}
+.srow{display:flex;align-items:flex-end;gap:1rem;padding:.9rem 0;border-top:1px solid var(--foreground-muted)}
+.srow:first-of-type{border-top:0;padding-top:.25rem}
+.srow svg{width:2rem;height:2rem;flex:none;fill:none;stroke:var(--foreground);stroke-width:1.3}
+.srow small{display:block;font-size:.75rem;color:var(--foreground-muted);letter-spacing:-.03em;margin-bottom:.45rem}
+.srow b{font-family:"Oswald";font-weight:500;font-size:2.375rem;line-height:.72;letter-spacing:-.06em}
+.strip{position:absolute;z-index:20;inset-inline:0;bottom:0;height:11.7361cqw;color:var(--on-dark);direction:ltr}
+.card{position:absolute;top:2.6cqw;display:flex;flex-direction:column;align-items:center;gap:max(.8333cqw,8px);text-align:center;transform:translateX(-50%)}
+.card .rd{font-size:max(.8333cqw,11px);color:var(--on-dark-muted);text-transform:uppercase}
+.card .nm{font-family:"Oswald";font-weight:700;font-size:max(1.25cqw,15px);line-height:.95;text-transform:uppercase;white-space:nowrap}
+.card .dt{font-size:max(.9722cqw,12px);color:var(--on-dark-muted)}
+html[lang=ar] .card .dt,html[lang=ar] .card .rd{font-family:"Readex Pro"}
+.card.live .rd,.card.live .dt{color:var(--accent)}
+a.card:hover .nm{color:var(--accent)}
+.mk{position:absolute;top:8.75cqw;transform:translate(-50%,-50%);font-family:"Oswald";font-weight:700;font-size:max(.8333cqw,11px);display:flex}
+.mk svg{width:11px;height:11px;overflow:visible}
+.link{position:absolute;top:9.1319cqw;height:1px;transform-origin:left;transform:scaleX(0);background:repeating-linear-gradient(to right,var(--on-dark-muted) 0 .4861cqw,transparent .4861cqw .7951cqw)}
+.livebr{position:absolute;top:1.6cqw;height:5.6cqw;pointer-events:none;opacity:0;color:var(--accent);transition:left 700ms var(--ease-plate),right 700ms var(--ease-plate)}
+.livebr .c{position:absolute;width:.6944cqw;height:.6944cqw}
+.livebr .c svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor}
+
+/* ── footer ───────────────────────── */
+#contact{position:relative;isolation:isolate;container-type:inline-size;min-height:100lvh;overflow:hidden;background:var(--accent)}
+.fpanel{position:absolute;inset:1.1111cqw;overflow:hidden;background:var(--surface-black);color:var(--on-dark)}
+.fpanel canvas{position:absolute;inset:0;width:100%;height:100%}
+.fig{position:absolute;inset:0;z-index:10;pointer-events:none}
+.fig .pin{position:absolute;inset:0}
+.fig img{position:absolute;left:50%;bottom:-.6%;height:74%;width:auto;transform:translateX(-50%);filter:saturate(.9)}
+.fh{position:absolute;z-index:20;top:var(--gutter);inset-inline-end:calc(var(--gutter) + 1.1111cqw);width:max(28cqw,280px);font-size:max(3.8194cqw,40px);display:flex;flex-direction:column;align-items:flex-end;text-align:end;color:var(--accent)}
+.fh .rv{justify-content:flex-end}
+.fh .stop{color:#fff}
+.flogo{position:absolute;z-index:20;top:calc(var(--gutter) + 1.1111cqw);inset-inline-start:calc(var(--gutter) + 1.1111cqw);color:#fff}
+.fnav{position:absolute;z-index:20;inset-inline-start:calc(var(--gutter) + 1.1111cqw);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:max(.8333cqw,10px);font-size:max(2.5cqw,28px)}
+.fnav a{display:block;width:max-content}
+.fnav a:hover{color:var(--accent)}
+.fnav .rv{column-gap:0}
+.fcontact{position:absolute;z-index:20;inset-inline-end:calc(var(--gutter) + 1.1111cqw);top:50%;transform:translateY(-35%);width:max(22cqw,280px);display:flex;flex-direction:column;gap:1rem}
+.fcontact .it{border-top:1px solid rgb(255 255 255/.15);padding-top:.75rem;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+.fcontact small{display:block;font-size:12px;color:var(--on-dark-muted);margin-bottom:.4rem;text-transform:uppercase}
+html[lang=ar] .fcontact small{text-transform:none}
+.fcontact .v{font-size:max(1.1cqw,15px);direction:ltr;unicode-bidi:isolate}
+.fcontact .v.ar{direction:inherit}
+.fcontact a.v:hover{color:var(--accent)}
+.copybtn{font-size:12px;color:var(--accent);border:1px solid rgb(255 122 48/.5);padding:.45rem .7rem;min-height:32px;text-transform:uppercase;white-space:nowrap}
+html[lang=ar] .copybtn{text-transform:none}
+.copybtn:hover{background:var(--accent);color:var(--surface-black)}
+.ffoot{position:absolute;z-index:20;inset-inline:calc(var(--gutter) + 1.1111cqw);bottom:calc(var(--gutter) + 1.1111cqw);display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:2rem}
+.ffoot .cr{font-size:max(.9722cqw,13px);line-height:1.2;color:var(--on-dark-faint);text-transform:uppercase}
+html[lang=ar] .ffoot .cr{text-transform:none}
+.ffoot .soc{display:flex;justify-content:flex-end;gap:2rem;font-size:max(.9722cqw,13px);text-transform:uppercase}
+.ffoot .soc a:hover{color:var(--accent)}
+.ffoot .cta{font-size:max(1.3889cqw,16px);width:13.75em}
+
+/* ── responsive ───────────────────────── */
+@media (max-width:1279px){
+  nav.prim,.mright .br{display:none}
+  .burger{display:block}
+  h1.name{font-size:4.375rem}
+  html[lang=ar] h1.name{font-size:4rem}
+  .hmid{align-items:flex-start;padding-top:2.5rem}
+  .meta{margin-top:2rem}
+}
+@media (max-width:1023px){
+  .hmid{flex-direction:column;gap:1.25rem;padding:1.5rem 0 0}
+  .panels{flex-direction:row;width:auto;gap:1rem}
+  .panels .bp{width:14rem}
+  .hact{grid-template-columns:1fr;gap:1rem}
+  .hact .trail,.hact .socials{display:none}
+  .hact .cta{width:100%;height:3.5rem}
+  .row.centre{height:auto;padding:0 var(--gutter) 3.5rem}
+  .row.centre .pl{position:relative;left:auto;margin:0;width:100%;aspect-ratio:710/462;height:auto}
+  .copy{position:relative;inset:auto!important;right:auto!important;top:auto;margin-top:1.5rem;width:100%;max-width:34rem;font-size:17px}
+  html[dir=rtl] .copy{right:auto}
+  .row.side{height:44cqw}
+  .row.side .pl{width:52cqw}
+  .railbox{display:none}
+  #journey .h2{position:relative;top:auto;inset:auto;width:auto;margin:0 var(--gutter) 3rem;align-items:flex-start;text-align:start}
+  #journey .h2 .rv{justify-content:flex-start}
+  .jwrap{padding-top:6rem}
+  #field{min-height:auto;padding-bottom:0}
+  #field .h2{position:relative;inset:auto;margin:0;padding:2rem var(--gutter) 0}
+  .fpanels{position:relative;inset:auto;width:auto;margin:1.5rem var(--gutter) 0;display:grid;grid-template-columns:1fr 1.4fr;gap:1.5rem;align-items:start}
+  .ffig{position:relative;left:auto;width:auto;height:auto;aspect-ratio:4/3;margin:2rem var(--gutter) 0}
+  .fintro{position:relative;inset:auto;width:auto;margin:1.5rem var(--gutter) 2rem}
+  .melt,.band{display:none}
+  .strip{position:relative;height:auto;background:var(--surface-black);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem 1rem;padding:2rem var(--gutter) 2.5rem}
+  .strip .card{position:static;transform:none!important;align-items:flex-start;text-align:start}
+  .strip .mk,.strip .link,.strip .livebr{display:none}
+  #contact{min-height:auto}
+  .fpanel{position:relative;inset:auto;margin:12px;padding:6rem var(--gutter) 2rem;display:flex;flex-direction:column;gap:2.5rem}
+  .flogo,.fh,.fnav,.fcontact,.ffoot{position:relative;inset:auto;transform:none;top:auto}
+  .flogo{position:absolute;top:1.25rem;inset-inline-start:var(--gutter)}
+  .fh{width:auto;align-items:flex-start;text-align:start}.fh .rv{justify-content:flex-start}
+  .fcontact{width:auto}
+  .fig{display:none}
+  .ffoot{grid-template-columns:1fr;gap:1.25rem}
+  .ffoot .soc{justify-content:flex-start}
+}
+@media (max-width:639px){
+  .hcol{padding:1rem var(--gutter)}
+  h1.name{font-size:3.6rem}
+  html[lang=ar] h1.name{font-size:3.2rem}
+  .meta li{font-size:1rem}
+  .panels{display:none}
+  .plate{width:100%;max-width:340px}
+  .icol{padding-top:4rem}
+  .intro{width:100%;max-width:20rem}
+  .row.side{height:62cqw}.row.side .pl{width:70cqw}
+  .fpanels{grid-template-columns:1fr}
+  .mapkey{display:none}
+  .plate{grid-template-columns:30% 1fr;height:auto;min-height:96px;padding:.7rem 0}
+  .plate dl{font-size:12px;line-height:1.15;gap:.4rem;padding-inline-end:.6rem}
+  .plate dd{white-space:normal}
+  .cap{white-space:normal;width:100%;bottom:auto;top:calc(100% + .5rem)}
+}
+@media (max-height:560px) and (min-width:640px){.meta{margin-top:1.25rem;gap:.4rem}h1.name{font-size:3.4rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div id="veil" role="status" aria-label="Loading">
+  <div class="vc"><div class="sil"><i></i><i></i></div><div class="vn up" data-t="name">Youssef Rahel</div></div>
+  <div class="meter"><i></i></div>
+</div>
+
+<div class="stack" id="stack">
+<!-- ═══════════ HERO ═══════════ -->
+<div class="layer l1"><div class="inner">
+<section id="hero" aria-labelledby="hname">
+  <canvas id="hbg" aria-hidden="true"></canvas>
+  <canvas id="hfg" aria-hidden="true"></canvas>
+  <div class="ramp"></div>
+  <div class="hcol">
+    <header class="mast rise" data-g="hero" data-d="0">
+      <a class="logo" href="#hero" aria-label="Youssef Rahel">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 18a12 12 0 0 1 12-12v12z" fill="#ff7a30"/><g stroke="#3b5bff" stroke-width="2.2" stroke-linecap="round"><path d="M16 26h12"/><path d="M16 22h9"/><path d="M16 18h6"/></g></svg>
+        <b>Y·RAHEL</b>
+      </a>
+      <nav class="prim" aria-label="Primary"><ul>
+        <li><a class="up" href="#hero" data-t="nProfile">Profile</a></li>
+        <li><a class="up" href="#impact" data-t="nImpact">Impact</a></li>
+        <li><a class="up" href="#journey" data-t="nJourney">Journey</a></li>
+        <li><a class="up" href="#field" data-t="nVentures">Ventures</a></li>
+      </ul></nav>
+      <div class="mright">
+        <div class="langs" role="group" aria-label="Language"><button data-l="ar" lang="ar">ع</button><button data-l="fr">FR</button><button data-l="en">EN</button></div>
+        <a class="br up lnk" href="#contact"><span aria-hidden="true">[ </span><b data-t="nContact">Contact</b><span aria-hidden="true"> → ]</span></a>
+        <button class="burger" aria-label="Menu" aria-haspopup="dialog"><i></i><i></i></button>
+      </div>
+    </header>
+
+    <div class="hmid">
+      <div class="ident">
+        <div class="id up rise" data-g="hero" data-d="180">founder_saharahub</div>
+        <h1 class="name rv" id="hname" data-t="name" data-reveal="words" data-g="hero" data-d="180" data-st="110">Youssef Rahel</h1>
+        <ul class="meta">
+          <li class="rise" data-g="hero" data-d="440"><svg viewBox="0 0 18 12" aria-hidden="true" style="height:.75rem"><rect width="18" height="12" fill="#c1272d"/><path d="M9 3.2l1.06 3.26H6.53l2.85-2.07-1.09 3.26L9 3.2l.71 4.45-2.85-2.07 3.47 0-2.85 2.07z" fill="none" stroke="#006233" stroke-width=".6" stroke-linejoin="round"/></svg><span data-t="m1" class="up">Smara, Morocco</span></li>
+          <li class="rise" data-g="hero" data-d="570"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c.6 4.4 3.6 7.4 8 8-4.4.6-7.4 3.6-8 8-.6-4.4-3.6-7.4-8-8 4.4-.6 7.4-3.6 8-8z" fill="#3b5bff"/></svg><span data-t="m2" class="up">Social entrepreneur</span></li>
+          <li class="rise" data-g="hero" data-d="700"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 18a12 12 0 0 1 12-12v12z" fill="#ff7a30"/><g stroke="#3b5bff" stroke-width="3" stroke-linecap="round"><path d="M16 26h12"/><path d="M16 20h8"/></g></svg><span data-t="m3" class="up">Founder · SAHARAHUB SARLAU</span></li>
+        </ul>
+      </div>
+      <div class="panels rise" data-g="hero" data-d="900">
+        <div class="bp">
+          <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c brc"></span>
+          <div class="eyebrow up" data-t="p1e">Latest award</div>
+          <div class="award"><dl class="up"><dt data-t="p1t">Morocco Youth Award</dt><dd data-t="p1a">Volunteerism · 2024</dd><dd data-t="p1b">3rd prize</dd></dl>
+          <svg viewBox="0 0 48 54" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 4c-6 6-12 6-14 14 6 1 11-2 14-6 3 4 8 7 14 6-2-8-8-8-14-14z"/><path d="M10 18c-2 7 2 13 8 14M38 18c2 7-2 13-8 14"/><path d="M24 12v26"/><rect x="14" y="38" width="20" height="6"/><path d="M11 50h26"/><circle cx="24" cy="25" r="4"/></svg></div>
+        </div>
+        <div class="bp">
+          <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c brc"></span>
+          <div class="eyebrow up" data-t="p2e">Field impact</div>
+          <dl class="stats up">
+            <div><dt data-t="s1">Workshops</dt><dd class="rv" data-reveal="letters" data-g="hero" data-d="1000" data-st="26" data-raw="40+">40+</dd></div>
+            <div><dt data-t="s2">Students</dt><dd class="rv" data-reveal="letters" data-g="hero" data-d="1090" data-st="26" data-raw="70+">70+</dd></div>
+            <div><dt data-t="s3">Partners</dt><dd class="rv" data-reveal="letters" data-g="hero" data-d="1180" data-st="26" data-raw="31">31</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="hact rise" data-g="hero" data-d="1500">
+      <a class="trail up" href="#journey"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15.5" fill="none" stroke="#0b1026"/><path d="M13 10.5l8 5.5-8 5.5z" fill="#0b1026"/></svg><span><b data-t="aj">Read the journey</b><small>2022 — 2026</small></span></a>
+      <a class="cta up" href="#contact"><svg class="fr" viewBox="0 0 220 50" preserveAspectRatio="none" aria-hidden="true"><path class="body" d="M220 42L212.932 50H0V0H220V42Z"/><path class="flood" d="M220 42L212.932 50H0V0H220V42Z"/><path class="ring" d="M220 42L212.932 50H0V0H220V42Z"/><path class="brk" d="M205 49.5H213L219.5 42V36M212 .5H219.5V7M8 .5H.5V7M7.5 49.5H.5V42.5"/></svg><span class="lab" data-t="ac">Contact me</span><svg class="arr" viewBox="0 0 13.7 10.7" aria-hidden="true"><path d="M0 5.35H13M8 10.35L13 5.35L8 .35"/></svg></a>
+      <div class="socials up"><a href="https://www.linkedin.com/in/youssefrahel/" rel="noopener">linkedin</a><a href="#contact" data-t="email">email</a></div>
+    </div>
+  </div>
+</section>
+<div class="shade"></div>
+</div></div>
+
+<!-- ═══════════ IMPACT ═══════════ -->
+<div class="layer l2"><div class="inner">
+<section id="impact" class="dark" aria-labelledby="ih">
+  <div class="stage"><canvas id="map" aria-hidden="true"></canvas></div>
+  <canvas class="seam" data-carry="light" aria-hidden="true"></canvas>
+  <div class="icol">
+    <div>
+      <h2 class="h2 disp" id="ih"><span class="rv" data-t="ih1" data-reveal="words" data-g="impact" data-d="0" data-st="110">The impact</span><span style="display:flex;flex-wrap:wrap"><span class="rv" data-t="ih2" data-reveal="words" data-g="impact" data-d="130" data-st="110">so far</span><span class="stop rise" data-g="impact" data-d="240" style="transform:none">.</span></span></h2>
+      <div class="rule rise-x" data-g="impact" data-d="260"></div>
+      <p class="intro up rv" data-t="iint" data-reveal="words" data-g="impact" data-d="350" data-st="34" style="column-gap:.22em">Every project starts in Smara and travels further. Here is the route so far.</p>
+    </div>
+    <div class="plate rise" data-g="impact" data-d="260">
+      <svg viewBox="0 0 277 78" preserveAspectRatio="none" aria-hidden="true"><path class="pf" d="M.5 .5H276.5V69L268 77.5H.5Z"/><path d="M83 .5V77.5" stroke="#ff7a30" vector-effect="non-scaling-stroke"/></svg>
+      <div class="badge up"><svg viewBox="0 0 37 23" aria-hidden="true"><ellipse cx="18.5" cy="11.5" rx="18" ry="11"/><path d="M.5 11.5h36"/><ellipse id="meridian" cx="18.5" cy="11.5" rx="18" ry="11"/></svg><span>SAHARA <b>/ 2026</b></span></div>
+      <dl class="up">
+        <div><dt data-t="pr1n">3rd</dt><dd data-t="pr1">national youth award</dd></div>
+        <div><dt>11</dt><dd data-t="pr2">student projects backed</dd></div>
+        <div><dt>9</dt><dd data-t="pr3">volunteers coordinated</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="mapkey rise" data-g="impact" data-d="900"><i></i><span data-t="mkey">Hover the map once the route is drawn.</span></div>
+</section>
+<div class="shade"></div>
+</div></div>
+
+<!-- ═══════════ JOURNEY ═══════════ -->
+<div class="layer last">
+<section id="journey" class="dark" aria-labelledby="jh">
+  <canvas class="seam" data-carry="light" aria-hidden="true" style="z-index:30"></canvas>
+  <h2 class="h2 disp" id="jh"><span class="rv" data-t="jh1" data-reveal="words" data-g="journey" data-d="0" data-st="110">From Smara</span><span style="display:flex;flex-wrap:wrap;justify-content:inherit"><span class="rv" data-t="jh2" data-reveal="words" data-g="journey" data-d="130" data-st="110">to the nation</span><span class="stop rise" data-g="journey" data-d="240" style="transform:none">.</span></span></h2>
+  <div class="jwrap">
+    <div class="railbox" aria-hidden="true"><svg id="rail" preserveAspectRatio="none"></svg></div>
+    <div class="rows" id="rows"></div>
+  </div>
+</section>
+</div>
+</div>
+
+<!-- ═══════════ FIELD ═══════════ -->
+<section id="field" aria-labelledby="fh">
+  <canvas class="ct" data-col="rgb(11 16 38 / .08)" aria-hidden="true"></canvas>
+  <div class="band"></div>
+  <div class="ffig"><div class="pin"><div class="plate2"><div class="fill"><div class="slot"><img src="img/trophies.webp" alt="" data-alt="altTroph" loading="lazy"></div></div><svg class="ol" viewBox="0 0 710.995 462.995" preserveAspectRatio="none"><path d="M13.6 .5H697.4C704.6 .5 710.5 4.3 710.5 8.9V411.2C710.5 415.9 704.6 419.7 697.4 419.7H460.2C449.5 419.7 437.3 423.4 428.1 429.6L399.2 453C392.8 458.1 380.6 462.5 368.5 462.5H13.6C6.4 462.5 .5 458.7 .5 454V8.9C.5 4.3 6.4 .5 13.6 .5Z"/></svg></div></div></div>
+  <div class="melt"></div>
+  <h2 class="h2 disp" id="fh"><span class="rv" data-t="fh1" data-reveal="words" data-g="field" data-d="0" data-st="110">From the</span><span style="display:flex;flex-wrap:wrap"><span class="rv" data-t="fh2" data-reveal="words" data-g="field" data-d="130" data-st="110">field</span><span class="stop rise" data-g="field" data-d="240" style="transform:none">.</span></span></h2>
+  <div class="fpanels">
+    <div class="bp rise" data-g="field" data-d="320">
+      <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c brc"></span>
+      <div class="eyebrow up" data-t="nowE">Now building</div>
+      <dl class="up"><dt>SAHARAHUB SARLAU</dt><dd data-t="nowA">Digital transformation</dd><dd data-t="m1">Smara, Morocco</dd></dl>
+    </div>
+    <div class="bp rise" data-g="field" data-d="460">
+      <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c brc"></span>
+      <div class="eyebrow up" data-t="numE" style="margin-bottom:.9rem">SAHARAHUB in numbers</div>
+      <div class="srow"><svg viewBox="0 0 32 32"><circle cx="11" cy="11" r="4"/><circle cx="22" cy="11" r="4"/><path d="M3 26c1-5 4-8 8-8s7 3 8 8M14 26c1-5 4-8 8-8s7 3 8 8"/></svg><div><small class="up" data-t="n1">partners</small><b>31</b></div></div>
+      <div class="srow"><svg viewBox="0 0 32 32"><path d="M4 18l6-6 5 4 5-5 8 7"/><path d="M4 26h24"/><path d="M8 26v-5M14 26v-7M20 26v-6M26 26v-4"/></svg><div><small class="up" data-t="n2">associations</small><b>20</b></div></div>
+      <div class="srow"><svg viewBox="0 0 32 32"><path d="M4 13l12-7 12 7"/><path d="M7 13v13h18V13"/><path d="M13 26v-7h6v7"/></svg><div><small class="up" data-t="n3">schools</small><b>4</b></div></div>
+      <div class="srow"><svg viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="16"/><path d="M12 10V6h8v4M5 17h22"/></svg><div><small class="up" data-t="n4">companies</small><b>5</b></div></div>
+    </div>
+  </div>
+  <div class="fintro">
+    <p class="rv" data-t="frep" data-reveal="words" data-g="field" data-d="350" data-st="30" style="column-gap:.22em">Certified in Sport for All leadership by TAFISA, part of the national Ramadan'IA AI hackathon, and now building digital tools for schools, associations and cooperatives in the Sahara.</p>
+    <a class="cta up rise" data-g="field" data-d="520" href="#contact"><svg class="fr" viewBox="0 0 217 50" preserveAspectRatio="none" aria-hidden="true"><path class="body" d="M.5 .5H216.5V42L209 49.5H.5Z" stroke="#ff7a30" vector-effect="non-scaling-stroke"/><path class="flood" d="M.5 .5H216.5V42L209 49.5H.5Z"/></svg><span class="lab" data-t="fbtn">Work together</span><svg class="arr" viewBox="0 0 13.7 10.7" aria-hidden="true"><path d="M0 5.35H13M8 10.35L13 5.35L8 .35"/></svg></a>
+  </div>
+  <div class="strip" id="strip"></div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact" aria-labelledby="ch">
+  <div class="fpanel">
+    <canvas class="ct" data-col="rgb(255 255 255 / .1)" aria-hidden="true"></canvas>
+    <div class="flogo rise" data-g="foot" data-d="120"><a class="logo" href="#hero"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 18a12 12 0 0 1 12-12v12z" fill="#ff7a30"/><g stroke="#6e86ff" stroke-width="2.2" stroke-linecap="round"><path d="M16 26h12"/><path d="M16 22h9"/><path d="M16 18h6"/></g></svg><b>Y·RAHEL</b></a></div>
+    <h2 class="fh disp" id="ch"><span class="rv" data-t="ch1" data-reveal="words" data-g="foot" data-d="0" data-st="110">Keep building</span><span style="display:flex;flex-wrap:wrap;justify-content:flex-end"><span class="rv" data-t="ch2" data-reveal="words" data-g="foot" data-d="130" data-st="110">forward</span><span class="stop rise" data-g="foot" data-d="240" style="transform:none">.</span></span></h2>
+    <nav class="fnav disp" aria-label="Footer">
+      <a href="#hero"><span class="rv" data-t="nProfile" data-reveal="letters" data-g="foot" data-d="260" data-st="22">Profile</span></a>
+      <a href="#impact"><span class="rv" data-t="nImpact" data-reveal="letters" data-g="foot" data-d="340" data-st="22">Impact</span></a>
+      <a href="#journey"><span class="rv" data-t="nJourney" data-reveal="letters" data-g="foot" data-d="420" data-st="22">Journey</span></a>
+      <a href="#field"><span class="rv" data-t="nVentures" data-reveal="letters" data-g="foot" data-d="500" data-st="22">Ventures</span></a>
+    </nav>
+    <div class="fcontact">
+      <div class="it rise" data-g="foot" data-d="560"><div><small>Email</small><span class="v">rahely.contact@gmail.com</span></div><button class="copybtn" data-copy="rahely.contact@gmail.com" data-t="copy">Copy</button></div>
+      <div class="it rise" data-g="foot" data-d="620"><div><small data-t="phone">Phone</small><span class="v">+212 698 813 057</span></div><button class="copybtn" data-copy="+212698813057" data-t="copy">Copy</button></div>
+      <div class="it rise" data-g="foot" data-d="680"><div><small>LinkedIn</small><a class="v" href="https://www.linkedin.com/in/youssefrahel/" rel="noopener">linkedin.com/in/youssefrahel ↗</a></div></div>
+      <div class="it rise" data-g="foot" data-d="740"><div><small data-t="cityL">Based in</small><span class="v ar" data-t="m1">Smara, Morocco</span></div></div>
+      <div class="it rise" data-g="foot" data-d="800"><div><small data-t="langL">Languages</small><span class="v ar" data-t="langs">Arabic · French C1 · English C1</span></div></div>
+    </div>
+    <div class="ffoot">
+      <div class="cr rise" data-g="foot" data-d="640">© 2026 Youssef Rahel.<br><span data-t="rights">Smara, Morocco — all rights reserved.</span></div>
+      <a class="cta hollow up rise" data-g="foot" data-d="720" href="https://www.linkedin.com/in/youssefrahel/" rel="noopener"><svg class="fr" viewBox="0 0 275 50" preserveAspectRatio="none" aria-hidden="true"><path class="body" d="M.5 .5H274.5V41.165L266.165 49.5H.5Z"/><path class="flood" d="M.5 .5H274.5V41.165L266.165 49.5H.5Z"/></svg><span class="lab" data-t="lbtn">LinkedIn profile</span><svg class="arr" viewBox="0 0 13.7 10.7" aria-hidden="true"><path d="M0 5.35H13M8 10.35L13 5.35L8 .35"/></svg></a>
+      <div class="soc rise" data-g="foot" data-d="800"><a href="https://www.linkedin.com/in/youssefrahel/" rel="noopener">LinkedIn</a><a href="#hero">↑ <span data-t="top">Top</span></a></div>
+    </div>
+  </div>
+  <div class="fig"><div class="pin" id="figpin"><img src="img/portrait.webp" alt="" loading="lazy"></div></div>
+</section>
+
+<div id="sheet" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="top"><a class="logo" href="#hero" data-close><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 18a12 12 0 0 1 12-12v12z" fill="#ff7a30"/><g stroke="#3b5bff" stroke-width="2.2" stroke-linecap="round"><path d="M16 26h12"/><path d="M16 22h9"/><path d="M16 18h6"/></g></svg><b>Y·RAHEL</b></a><button class="x" aria-label="Close"><i></i><i></i></button></div>
+  <nav>
+    <a href="#hero" data-close data-t="nProfile">Profile</a><a href="#impact" data-close data-t="nImpact">Impact</a><a href="#journey" data-close data-t="nJourney">Journey</a><a href="#field" data-close data-t="nVentures">Ventures</a><a href="#contact" data-close data-t="nContact">Contact</a>
+    <div class="langs" role="group" aria-label="Language"><button data-l="ar" lang="ar">العربية</button><button data-l="fr">Français</button><button data-l="en">English</button></div>
+  </nav>
+</div>
+
+<script>
+{
+/* ───────────── copy ───────────── */
+const T={
+en:{name:"Youssef Rahel",nProfile:"Profile",nImpact:"Impact",nJourney:"Journey",nVentures:"Ventures",nContact:"Contact",
+m1:"Smara, Morocco",m2:"Social entrepreneur",m3:"Founder · SAHARAHUB SARLAU",p1e:"Latest award",p1t:"Morocco Youth Award",p1a:"Volunteerism · 2024",p1b:"3rd prize",
+p2e:"Field impact",s1:"Workshops",s2:"Students",s3:"Partners",aj:"Read the journey",ac:"Contact me",email:"email",
+ih1:"The impact",ih2:"so far",iint:"Every project starts in Smara and travels further. Here is the route so far.",pr1n:"3rd",pr1:"national youth award",pr2:"student projects backed",pr3:"volunteers coordinated",mkey:"The route lights up as you arrive. Then move over the map.",
+jh1:"From Smara",jh2:"to the nation",
+r1l:"Sport as a classroom.",r1:"Project manager at the Moustakbel El Gaiz football association in Smara: competitions, community events and school championships with the regional league.",
+r2:"Volunteer",r3l:"National recognition.",r3:"Morocco Youth Award 2024, volunteerism category, for “Back to school 2024–2025”: four weeks of learning support so children start the year with confidence.",
+r4:"Rabat",r5l:"Empowering youth, transforming schools.",r5:"With the TANARA programme: 3 public middle schools, 70+ students, 40+ workshops and 11 student projects supported.",
+r6:"TAFISA",r7l:"Founder of SAHARAHUB.",r7:"A Moroccan startup for digital transformation in education and society: educational games, social platforms and management systems.",
+c2:"Volunteering with AJIAL — classrooms ready for the new year",c4:"Presenting the project at the award ceremony, Rabat",c6:"TAFISA Sport for All leadership course, online cohort, 2026",
+fh1:"From the",fh2:"field",frep:"Certified in Sport for All leadership by TAFISA, part of the national Ramadan'IA AI hackathon, and now building digital tools for schools, associations and cooperatives in the Sahara.",fbtn:"Work together",
+nowE:"Now building",nowA:"Digital transformation",numE:"SAHARAHUB in numbers",n1:"partners",n2:"associations",n3:"schools",n4:"companies",
+k1r:"2022",k1d:"Founder",k2r:"2024",k2n:"Back to school",k2d:"Youth Award",k2m:"3rd",k3r:"2026",k3d:"Live",k4r:"Product",k4d:"Educational game",k5r:"Product",k5d:"Volunteer platform",
+ch1:"Keep building",ch2:"forward",copy:"Copy",copied:"Copied",phone:"Phone",cityL:"Based in",langL:"Languages",langs:"Arabic · French C1 · English C1",rights:"Smara, Morocco — all rights reserved.",lbtn:"LinkedIn profile",top:"Top",
+altTroph:"Youssef Rahel with fellow Morocco Youth Award laureates holding their trophies",cities:["Marrakech · 2021","Smara · home","Rabat · 2024","Tarfaya · 2025","Laâyoune · 2026"],loading:"Loading",loaded:"Loaded"},
+fr:{name:"Youssef Rahel",nProfile:"Profil",nImpact:"Impact",nJourney:"Parcours",nVentures:"Projets",nContact:"Contact",
+m1:"Smara, Maroc",m2:"Entrepreneur social",m3:"Fondateur · SAHARAHUB SARLAU",p1e:"Dernière distinction",p1t:"Prix Maroc Jeunesse",p1a:"Volontariat · 2024",p1b:"3e prix",
+p2e:"Impact terrain",s1:"Ateliers",s2:"Élèves",s3:"Partenaires",aj:"Lire le parcours",ac:"Me contacter",email:"e-mail",
+ih1:"L'impact",ih2:"à ce jour",iint:"Chaque projet part de Smara et va plus loin. Voici le chemin parcouru.",pr1n:"3e",pr1:"prix national jeunesse",pr2:"projets d'élèves accompagnés",pr3:"bénévoles coordonnés",mkey:"La route s'allume à votre arrivée. Survolez ensuite la carte.",
+jh1:"De Smara",jh2:"à la nation",
+r1l:"Le sport comme école.",r1:"Chef de projet à l'association Moustakbel El Gaiz de football à Smara : compétitions, événements communautaires et championnats scolaires avec la ligue régionale.",
+r2:"Bénévolat",r3l:"Reconnaissance nationale.",r3:"Prix Maroc Jeunesse 2024, catégorie volontariat, pour « Préparation de la rentrée 2024–2025 » : quatre semaines de soutien scolaire pour une rentrée en confiance.",
+r4:"Rabat",r5l:"Des jeunes qui changent l'école.",r5:"Avec le programme TANARA : 3 collèges publics, plus de 70 élèves, plus de 40 ateliers et 11 projets d'élèves accompagnés.",
+r6:"TAFISA",r7l:"Fondateur de SAHARAHUB.",r7:"Une startup marocaine de transformation digitale pour l'éducation et la société : jeux éducatifs, plateformes sociales et systèmes de gestion.",
+c2:"Bénévolat avec AJIAL — des classes prêtes pour la rentrée",c4:"Présentation du projet lors de la cérémonie, Rabat",c6:"Formation TAFISA au leadership Sport pour tous, promotion en ligne, 2026",
+fh1:"Du",fh2:"terrain",frep:"Certifié en leadership « Sport pour tous » par TAFISA, participant au hackathon national d'IA Ramadan'IA, il conçoit aujourd'hui des outils numériques pour les écoles, associations et coopératives du Sahara.",fbtn:"Travailler ensemble",
+nowE:"En construction",nowA:"Transformation digitale",numE:"SAHARAHUB en chiffres",n1:"partenaires",n2:"associations",n3:"établissements",n4:"entreprises",
+k1r:"2022",k1d:"Fondateur",k2r:"2024",k2n:"Rentrée scolaire",k2d:"Prix Jeunesse",k2m:"3e",k3r:"2026",k3d:"En cours",k4r:"Produit",k4d:"Jeu éducatif",k5r:"Produit",k5d:"Plateforme de bénévolat",
+ch1:"Continuer",ch2:"à construire",copy:"Copier",copied:"Copié",phone:"Téléphone",cityL:"Basé à",langL:"Langues",langs:"Arabe · Français C1 · Anglais C1",rights:"Smara, Maroc — tous droits réservés.",lbtn:"Profil LinkedIn",top:"Haut",
+altTroph:"Youssef Rahel avec d'autres lauréats du Prix Maroc Jeunesse et leurs trophées",cities:["Marrakech · 2021","Smara · base","Rabat · 2024","Tarfaya · 2025","Laâyoune · 2026"],loading:"Chargement",loaded:"Chargé"},
+ar:{name:"يوسف الراحل",nProfile:"الملف",nImpact:"الأثر",nJourney:"المسار",nVentures:"المشاريع",nContact:"تواصل",
+m1:"السمارة، المغرب",m2:"مقاول اجتماعي",m3:"مؤسس · SAHARAHUB SARLAU",p1e:"آخر تتويج",p1t:"جائزة المغرب للشباب",p1a:"العمل التطوعي · 2024",p1b:"المرتبة الثالثة",
+p2e:"الأثر الميداني",s1:"ورشة",s2:"تلميذ",s3:"شريك",aj:"اكتشف المسار",ac:"تواصل معي",email:"البريد",
+ih1:"الأثر",ih2:"حتى الآن",iint:"كل مشروع ينطلق من السمارة ويمضي أبعد. هذا هو الطريق حتى الآن.",pr1n:"3",pr1:"جائزة وطنية للشباب",pr2:"مشروعاً تلاميذياً مدعوماً",pr3:"متطوعين منسَّقين",mkey:"يضيء الطريق عند وصولك، ثم مرّر المؤشر فوق الخريطة.",
+jh1:"من السمارة",jh2:"إلى الوطن",
+r1l:"الرياضة مدرسة.",r1:"مدير مشاريع بجمعية Moustakbel El Gaiz لكرة القدم بالسمارة: منافسات وأنشطة مجتمعية وبطولات مدرسية بتنسيق مع العصبة الجهوية.",
+r2:"تطوع",r3l:"اعتراف وطني.",r3:"جائزة المغرب للشباب 2024، فئة العمل التطوعي، عن مشروع «الاستعداد للموسم الدراسي الجديد 2024/2025»: أربعة أسابيع من الدعم الدراسي والتربوي ليستقبل الأطفال موسمهم بثقة.",
+r4:"الرباط",r5l:"شباب يغيّرون المدرسة.",r5:"مع برنامج TANARA: ثلاث إعداديات عمومية، أكثر من 70 تلميذاً، أكثر من 40 ورشة و11 مشروعاً تلاميذياً مدعوماً.",
+r6:"TAFISA",r7l:"مؤسس SAHARAHUB.",r7:"شركة ناشئة مغربية للتحول الرقمي في التعليم والمجتمع: ألعاب تعليمية، منصات اجتماعية وأنظمة تدبير.",
+c2:"تطوع مع جمعية أجيال — أقسام جاهزة للموسم الجديد",c4:"تقديم المشروع خلال حفل التتويج، الرباط",c6:"دورة TAFISA للقيادة في الرياضة للجميع، عن بُعد، 2026",
+fh1:"من",fh2:"الميدان",frep:"حاصل على شهادة القيادة في «الرياضة للجميع» من TAFISA، ومشارك في هاكاثون Ramadan'IA الوطني للذكاء الاصطناعي، ويبني اليوم أدوات رقمية للمدارس والجمعيات والتعاونيات في الصحراء.",fbtn:"لنعمل معاً",
+nowE:"أبني الآن",nowA:"التحول الرقمي",numE:"SAHARAHUB بالأرقام",n1:"شريك",n2:"جمعية",n3:"مؤسسة تعليمية",n4:"مقاولة",
+k1r:"2022",k1d:"مؤسس",k2r:"2024",k2n:"الدخول المدرسي",k2d:"جائزة الشباب",k2m:"3",k3r:"2026",k3d:"قيد الإنجاز",k4r:"منتج",k4d:"لعبة تعليمية",k5r:"منتج",k5d:"منصة تطوع",
+ch1:"نواصل",ch2:"البناء",copy:"نسخ",copied:"تم النسخ",phone:"الهاتف",cityL:"المدينة",langL:"اللغات",langs:"العربية · الفرنسية C1 · الإنجليزية C1",rights:"السمارة، المغرب — جميع الحقوق محفوظة.",lbtn:"حساب LinkedIn",top:"للأعلى",
+altTroph:"يوسف الراحل مع فائزين آخرين بجائزة المغرب للشباب يحملون كؤوسهم",cities:["مراكش · 2021","السمارة · المنطلق","الرباط · 2024","طرفاية · 2025","العيون · 2026"],loading:"جارٍ التحميل",loaded:"تم التحميل"}};
+
+const ROWS=[
+ {y:"2022",f:"centre",img:"sport",lead:"r1l",body:"r1",alt:"Youssef Rahel with young footballers and the Moroccan flag on a sports court in Smara"},
+ {y:"r2",f:"side",a:"r",img:"ajial",cap:"c2",alt:"Volunteers in AJIAL t-shirts assembling classroom desks"},
+ {y:"2024",f:"centre",img:"stage",lead:"r3l",body:"r3",alt:"Morocco Youth Award laureates on stage with their trophies"},
+ {y:"r4",f:"side",a:"l",img:"minister",cap:"c4",alt:"Youssef Rahel presenting his project to officials at the award ceremony"},
+ {y:"2025",f:"centre",img:"workshop",lead:"r5l",body:"r5",alt:"Youssef Rahel leading a group activity with young people"},
+ {y:"r6",f:"side",a:"r",img:"call",cap:"c6",alt:"Online cohort of the TAFISA leadership course"},
+ {y:"2026",f:"centre",img:null,lead:"r7l",body:"r7",alt:""}];
+const CARDS=[{x:275,w:110,r:"k1r",n:"KODWA Smara",d:"k1d",m:"ring"},{x:460,w:120,r:"k2r",n:"k2n",d:"k2d",m:"k2m"},{x:670,w:100,r:"k3r",n:"SAHARAHUB",d:"k3d",m:"live"},
+ {x:860,w:120,r:"k4r",n:"EduPlay 3D",d:"k4d",m:"ring",href:"https://eduplay3d.lovable.app/"},{x:1060,w:170,r:"k5r",n:"Skilled Volunteer MA",d:"k5d",m:"ring",href:"https://skilledvolunteerma.lovable.app/"}];
+const LINKS=[];
+
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(RM)document.documentElement.classList.add("no-motion");
+history.scrollRestoration="manual";scrollTo(0,0);
+let lang="en";
+try{const s=localStorage.getItem("yr-lang");if(s&&T[s])lang=s;else{const n=(navigator.language||"en").slice(0,2);if(T[n])lang=n}}catch(e){const n=(navigator.language||"en").slice(0,2);if(T[n])lang=n}
+const t=k=>(T[lang][k]??T.en[k]??k);
+
+/* ───────────── ticker + springs ───────────── */
+const subs=new Set();let raf=0;
+const loop=time=>{for(const s of [...subs]){if(time-s.last>s.fr()){s.last=time;s.cb(time)}}raf=subs.size?requestAnimationFrame(loop):0};
+const subscribe=(cb,fr=()=>0)=>{const s={cb,fr,last:0};subs.add(s);if(!raf)raf=requestAnimationFrame(loop);return()=>subs.delete(s)};
+const anims=new Set();let lastT=0;
+subscribe(time=>{const dt=lastT?Math.min(64,time-lastT):16;lastT=time;
+  for(const a of [...anims]){
+    if(a.start>time)continue;
+    let n=Math.max(1,Math.round(dt));while(n--){const acc=-a.k*(a.x-a.to)-a.c*a.v;a.v+=acc/1000;a.x+=a.v/1000}
+    if(Math.abs(a.v)<.01&&Math.abs(a.to-a.x)<.001){a.x=a.to;anims.delete(a);a.up(a.x);a.done&&a.done();continue}
+    a.up(a.x)}
+});
+const spring=(from,to,[k,c],delay,up,done)=>{if(RM){up(to);done&&done();return}const a={x:from,v:0,to,k,c,start:performance.now()+delay,up,done};anims.add(a);up(from);return a};
+const REVEAL=[90,26],FIG=[200,24],COPY=[110,26],ITEM=[170,24],YEAR=[190,24];
+const smooth=(e0,e1,x)=>{x=Math.min(1,Math.max(0,(x-e0)/(e1-e0)));return x*x*(3-2*x)};
+
+/* ───────────── i18n + text engine ───────────── */
+const played=new Set();
+const build=el=>{
+  const raw=el.dataset.raw||(el.dataset.t?t(el.dataset.t):el.textContent);
+  const mode=lang==="ar"?"words":el.dataset.reveal;
+  el.innerHTML="";const sr=document.createElement("span");sr.className="sr";sr.textContent=raw;el.append(sr);
+  const box=document.createDocumentFragment();const units=[];
+  raw.split(/\s+/).filter(Boolean).forEach(w=>{
+    if(mode==="letters"){const ww=document.createElement("span");ww.className="w";ww.setAttribute("aria-hidden","true");
+      [...w].forEach(ch=>{const u=document.createElement("span");u.className="u";u.textContent=ch;ww.append(u);units.push(u)});box.append(ww)}
+    else{const u=document.createElement("span");u.className="u";u.setAttribute("aria-hidden","true");u.textContent=w;box.append(u);units.push(u)}
+  });
+  if(mode==="letters"&&el.closest(".fnav,.year,.stats"))el.style.columnGap=".25em";
+  el.append(box);el._u=units;
+  if(played.has(el.dataset.g)||RM)units.forEach(u=>{u.style.opacity=1;u.style.transform="none"});
+};
+const playText=el=>{const base=+el.dataset.d||0,st=+el.dataset.st||60,cfg=el.dataset.reveal==="letters"?FIG:REVEAL;
+  const em=el.dataset.reveal==="letters"?.3:.35;
+  el._u.forEach((u,i)=>spring(0,1,cfg,base+i*st,p=>{u.style.opacity=Math.min(1,p);u.style.transform=`translateY(${(1-p)*em}em)`}))};
+const playRise=el=>{const d=+el.dataset.d||0;
+  if(el.classList.contains("rise-x")){spring(0,1,REVEAL,d,p=>{el.style.transform=`scaleX(${p})`});return}
+  const isStop=el.classList.contains("stop");
+  spring(0,1,isStop?COPY:REVEAL,d,p=>{el.style.opacity=Math.min(1,p);if(!isStop)el.style.transform=p>=1?"none":`translateY(${(1-p)*.75}rem)`})};
+const playGroup=g=>{if(played.has(g))return;played.add(g);
+  $$(`[data-g="${g}"]`).forEach(el=>{if(el.dataset.reveal)playText(el);else playRise(el)});
+  document.dispatchEvent(new CustomEvent("group",{detail:g}))};
+
+const applyLang=(first)=>{
+  const H=document.documentElement;H.lang=lang;H.dir=lang==="ar"?"rtl":"ltr";
+  $$("[data-t]").forEach(el=>{if(el.dataset.reveal)return;const v=t(el.dataset.t);if(typeof v==="string")el.textContent=v});
+  $$("[data-alt]").forEach(el=>el.alt=t(el.dataset.alt));
+  $$("[data-reveal]").forEach(build);
+  $$(".langs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===lang));
+  renderRows();renderStrip();
+  document.title=lang==="ar"?"يوسف الراحل — مقاول اجتماعي":lang==="fr"?"Youssef Rahel — Entrepreneur social":"Youssef Rahel — Social entrepreneur";
+  if(!first){document.dispatchEvent(new Event("relang"))}
+};
+$$(".langs button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.l;try{localStorage.setItem("yr-lang",lang)}catch(e){}applyLang(false)}));
+
+/* bracket corners */
+const BR='<svg viewBox="0 0 10.5 10.5"><path d="M0 .5H10V10.5"/></svg>';
+$$(".bp .c,.livebr .c").forEach(c=>c.innerHTML=BR);
+
+/* ───────────── timeline rows ───────────── */
+const OUT="M13.6 .5H697.4C704.6 .5 710.5 4.3 710.5 8.9V411.2C710.5 415.9 704.6 419.7 697.4 419.7H460.2C449.5 419.7 437.3 423.4 428.1 429.6L399.2 453C392.8 458.1 380.6 462.5 368.5 462.5H13.6C6.4 462.5 .5 458.7 .5 454V8.9C.5 4.3 6.4 .5 13.6 .5Z";
+const CLIP="M .019,.001H .981C .986,.001 .99,.003 .994,.006C .997,.01 .999,.014 .999,.019V .888C .999,.893 .997,.898 .994,.901C .99,.904 .986,.906 .981,.906H .647C .639,.906 .63,.908 .622,.912C .614,.916 .608,.921 .602,.928L .562,.978C .556,.985 .55,.99 .542,.994C .535,.997 .527,.999 .518,.999H .019C .014,.999 .01,.997 .006,.994C .003,.99 .001,.986 .001,.981V .019C .001,.014 .003,.01 .006,.006C .01,.003 .014,.001 .019,.001Z";
+document.body.insertAdjacentHTML("beforeend",`<svg width="0" height="0" style="position:absolute" aria-hidden="true"><clipPath id="pclip" clipPathUnits="objectBoundingBox"><path d="${CLIP}"/></clipPath></svg>`);
+$$(".plate2 .fill").forEach(f=>f.style.clipPath="url(#pclip)");
+const yearOf=r=>/^\d/.test(r.y)?r.y:t(r.y);
+function renderRows(){
+  const rows=$("#rows");
+  rows.innerHTML=ROWS.map((r,i)=>{
+    const pic=r.img?`<img src="img/${r.img}.webp" alt="${r.alt}" loading="lazy">`:`<div class="sbadge" role="img" aria-label="SAHARAHUB"><div class="wm">sahara<span>hub</span></div><div class="lines"><i></i><i></i><i></i><i></i></div></div>`;
+    return `<div class="row ${r.f} ${r.a||""}" data-i="${i}">
+      <div class="pl"><div class="pin" data-par="${r.f==="side"?60:20}">
+        <div class="plate2"><div class="fill" style="clip-path:url(#pclip)"><div class="slot">${pic}</div></div><svg class="ol" viewBox="0 0 710.995 462.995" preserveAspectRatio="none"><path d="${OUT}"/></svg></div>
+        <div class="year disp"><span class="rv" data-reveal="letters" data-raw="${yearOf(r)}" data-st="26">${yearOf(r)}</span></div>
+        ${r.cap?`<div class="cap">${t(r.cap)}</div>`:""}
+      </div></div>
+      ${r.lead?`<div class="copy"><div class="cin" data-par="110"><p class="rise"><b>${t(r.lead)}</b><span>${t(r.body)}</span></p></div></div>`:""}
+    </div>`}).join("");
+  $$(".row .rv",rows).forEach(el=>{build(el);if(el._done){}});
+  rows._seen=new Set();
+  rowIO&&$$(".row",rows).forEach(r=>rowIO.observe(r));
+  $$(".row .plate2",rows).forEach(p=>{p.addEventListener("pointerenter",()=>{if(!matchMedia("(hover:hover)").matches)return;rows.classList.add("dim");p.closest(".row").classList.add("hot")});
+    p.addEventListener("pointerleave",()=>{rows.classList.remove("dim");p.closest(".row").classList.remove("hot")})});
+  requestAnimationFrame(()=>{layoutRail();scrollWork()});
+}
+let rowIO=null;
+rowIO=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;rowIO.unobserve(e.target);const row=e.target;
+  const yr=$(".year .rv",row);if(yr)playText(yr);
+  const p=$(".copy p",row);if(p)spring(0,1,COPY,220,v=>{p.style.opacity=Math.min(1,v);p.style.transform=`translateY(${(1-v)*.75}rem)`});
+  if(row.classList.contains("centre")&&yr)setTimeout(()=>spring(1,.4,[32,26],0,v=>yr.style.opacity=v),2400);
+}),{rootMargin:"0% 0% -25% 0%"});
+
+/* ───────────── ventures strip ───────────── */
+const px=v=>`${(v/1440*100).toFixed(4)}cqw`;
+const spread=x=>`calc(50% + ${px(x-720)})`;
+function renderStrip(){
+  const s=$("#strip");const nm=c=>(T.en[c.n]?t(c.n):c.n);
+  const cx=CARDS.map(c=>c.x+c.w/2);LINKS.length=0;for(let i=0;i<cx.length-1;i++)LINKS.push({x:cx[i]+18,w:cx[i+1]-cx[i]-36});
+  s.innerHTML=LINKS.map((l,i)=>`<i class="link" style="left:${spread(l.x)};width:${px(l.w)}" data-i="${i}"></i>`).join("")+
+  CARDS.map((c,i)=>{const tag=c.href?"a":"div";
+    const mk=c.m==="ring"?`<svg viewBox="0 0 11 11"><circle cx="5.5" cy="5.5" r="5" fill="none" stroke="#fff"/></svg>`:c.m==="live"?`<svg viewBox="0 0 11 11"><circle class="pulse" cx="5.5" cy="5.5" r="5.5" fill="none" stroke="#ff7a30" vector-effect="non-scaling-stroke"/><circle cx="5.5" cy="5.5" r="5.5" fill="#ff7a30"/></svg>`:`<span>${t(c.m)}</span>`;
+    return `<${tag} class="card ${c.m==="live"?"live":""} rise" data-g="strip" data-d="${560+i*90}" style="left:${spread(c.x+c.w/2)}" ${c.href?`href="${c.href}" rel="noopener"`:""}><span class="rd">${t(c.r)}</span><span class="nm">${nm(c)}${c.href?" ↗":""}</span><span class="dt">${t(c.d)}</span></${tag}><div class="mk" style="left:${spread(c.x+c.w/2)}">${mk}</div>`}).join("")+
+  `<div class="livebr" style="left:${spread(662)};width:${px(116)}"><span class="c tl" style="top:0;left:0"></span><span class="c tr" style="top:0;right:0"></span><span class="c bl" style="bottom:0;left:0"></span><span class="c brc" style="bottom:0;right:0"></span></div>`;
+  $$(".livebr .c",s).forEach(c=>c.innerHTML=BR);
+  if(played.has("strip")){$$(".card",s).forEach(c=>{c.style.opacity=1;c.style.transform="translateX(-50%)"});$$(".link",s).forEach(l=>l.style.transform="scaleX(1)");$(".livebr",s).style.opacity=1}
+}
+const stripIO=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;stripIO.disconnect();played.add("strip");const s=$("#strip");
+  $$(".card",s).forEach((c,i)=>spring(0,1,ITEM,560+i*90,p=>{c.style.opacity=Math.min(1,p);c.style.transform=`translateX(-50%) translateY(${(1-p)*.5}rem)`}));
+  $$(".link",s).forEach((l,i)=>spring(0,1,REVEAL,560+i*90,p=>l.style.transform=`scaleX(${p})`));
+  spring(0,1,COPY,560+5*90,p=>$(".livebr",s).style.opacity=Math.min(1,p));
+},{rootMargin:"0% 0% -20% 0%"});
+/* strip crawl + pulse */
+{const t0=performance.now();subscribe(now=>{const s=$("#strip");if(!s)return;
+  const r=s.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+  const v=((now-t0)%5200)/5200;$$(".link",s).forEach((l,i)=>{l.style.backgroundPositionX=`${(i<2?1:-1)*v*0.7951}cqw`});
+  const pv=((now-t0)%3200)/3200,e=1-(1-pv)*(1-pv);const pc=$(".pulse",s);if(pc){pc.setAttribute("r",5.5+e*5.5*3.4);pc.style.opacity=.5*(1-e)**2}},()=>30)}
+$("#strip").addEventListener("pointerover",e=>{const live=e.target.closest(".card.live");$(".livebr").style.transform=live?"scale(1.08)":"none"});
+
+/* ───────────── contour field (marching squares) ───────────── */
+const field=(x,y,t)=>{let f=Math.sin(x+t*.6)*.5;f+=Math.sin(y*.85-t*.45)*.45;f+=Math.sin((x+y)*.65+t*.35)*.35;f+=Math.sin((x-y)*.95-t*.55)*.25;return f*.5+.5};
+function contours(ctx,W,H,t,colour,width=1){
+  const C=96,cols=W>=H?C:Math.max(8,Math.round(C*W/H)),rows=Math.max(8,Math.round(cols*H/W));
+  const sx=W/cols,sy=H/rows,asp=W/H,LS=3.8,LC=2.5,WA=.37;const V=new Float32Array((cols+1)*(rows+1));
+  for(let j=0;j<=rows;j++)for(let i=0;i<=cols;i++){const nx=((i/cols)*2-1)*asp*LS,ny=((j/rows)*2-1)*LS;
+    const qx=nx+Math.sin(ny*.8+t*.7)*WA,qy=ny+Math.cos(nx*.7-t*.6)*WA;V[j*(cols+1)+i]=field(qx,qy,t)*LC}
+  ctx.strokeStyle=colour;ctx.lineWidth=width;ctx.globalAlpha=.85;ctx.beginPath();
+  for(let lv=.5;lv<LC;lv+=1)for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){
+    const a=V[j*(cols+1)+i],b=V[j*(cols+1)+i+1],c=V[(j+1)*(cols+1)+i+1],d=V[(j+1)*(cols+1)+i];
+    const k=(a>lv?8:0)|(b>lv?4:0)|(c>lv?2:0)|(d>lv?1:0);if(k===0||k===15)continue;
+    const x0=i*sx,y0=j*sy,T_=[x0+sx*((lv-a)/(b-a)),y0],R=[x0+sx,y0+sy*((lv-b)/(c-b))],B=[x0+sx*((lv-d)/(c-d)),y0+sy],L=[x0,y0+sy*((lv-a)/(d-a))];
+    const sg=(p,q)=>{ctx.moveTo(p[0],p[1]);ctx.lineTo(q[0],q[1])};
+    switch(k){case 1:case 14:sg(L,B);break;case 2:case 13:sg(B,R);break;case 3:case 12:sg(L,R);break;case 4:case 11:sg(T_,R);break;case 6:case 9:sg(T_,B);break;case 7:case 8:sg(L,T_);break;case 5:sg(L,T_);sg(B,R);break;case 10:sg(L,B);sg(T_,R);break}}
+  ctx.stroke();ctx.globalAlpha=1}
+const inView=new Map();
+const vIO=new IntersectionObserver(es=>es.forEach(e=>inView.set(e.target,e.isIntersecting)),{rootMargin:"10% 0px"});
+const fitCanvas=(cv,max=2)=>{const r=Math.min(devicePixelRatio||1,max),w=cv.clientWidth,h=cv.clientHeight;if(cv.width!==Math.round(w*r)||cv.height!==Math.round(h*r)){cv.width=Math.round(w*r);cv.height=Math.round(h*r)}return r};
+$$("canvas.ct").forEach(cv=>{vIO.observe(cv);const ctx=cv.getContext("2d"),t0=performance.now();
+  const draw=now=>{if(!inView.get(cv))return;const r=fitCanvas(cv);ctx.setTransform(r,0,0,r,0,0);ctx.clearRect(0,0,cv.width,cv.height);
+    contours(ctx,cv.clientWidth,cv.clientHeight,RM?2:(now-t0)/1000*1.66*.5,cv.dataset.col)};
+  RM?setTimeout(()=>{inView.set(cv,true);draw(0)},300):subscribe(draw,()=>40)});
+
+/* ───────────── chequered seams ───────────── */
+const seams=$$("canvas.seam");
+const hash=(x,y)=>{let h=Math.imul(x,374761393)+Math.imul(y,668265263);h=Math.imul(h^(h>>>13),1274126177);return((h^(h>>>16))>>>0)/4294967295};
+function drawSeam(cv,p){const r=fitCanvas(cv,2),ctx=cv.getContext("2d");ctx.setTransform(r,0,0,r,0,0);const W=cv.clientWidth,H=cv.clientHeight;ctx.clearRect(0,0,W,H);
+  const cell=W<640?16:24,cols=Math.ceil(W/cell),rows=Math.ceil(H/cell),lift=p*2,surf="#f5f6fa",acc="#ff7a30";
+  for(let y=0;y<rows;y++){const depth=y/Math.max(1,rows-1)+lift;if(depth>1)break;const solid=depth<=.16;const fade=Math.min(1,Math.max(0,1-(depth-.16)/.84));if(!solid&&fade<=0)break;
+    for(let x=0;x<cols;x++){if(!solid){if((x+y)%2)continue;if(hash(x,y)>fade)continue}ctx.fillStyle=!solid&&hash(x+101,y+57)<.06?acc:surf;ctx.fillRect(x*cell,y*cell,cell,cell)}}}
+
+/* ───────────── hero scene (2D) ───────────── */
+const hbg=$("#hbg"),hfg=$("#hfg"),hero=$("#hero");
+const portrait=new Image();portrait.src="img/portrait.webp";
+const S={ready:false,intro:0,readyAt:0,rise:0,riseAt:0,pointer:{x:.3,y:.1},sm:{x:.3,y:.1},last:{x:.3,y:.1},pace:0,trail:[],seen:false,box:null,data:null,dots:null,burnGrid:null};
+const NS=40;
+const coarse=matchMedia("(hover: none)").matches;
+function heroBox(){const W=hero.clientWidth,H=hero.clientHeight,ar=portrait.naturalWidth/portrait.naturalHeight;
+  let h,cx=W/2;
+  if(W>=1024){h=H*.82}else{h=Math.min(H*.6,W*1.3/ar)}
+  const w=h*ar;return{x:cx-w/2,y:H-h,w,h}}
+function buildData(){const b=S.box,r=Math.min(devicePixelRatio||1,1.5);const w=Math.round(b.w*r),h=Math.round(b.h*r);
+  const src=document.createElement("canvas");src.width=w;src.height=h;const sc=src.getContext("2d");sc.drawImage(portrait,0,0,w,h);
+  const id=sc.getImageData(0,0,w,h).data;
+  const mk=()=>{const c=document.createElement("canvas");c.width=w;c.height=h;return c};
+  const data=mk(),dots=mk();const dc=data.getContext("2d"),oc=dots.getContext("2d");
+  dc.drawImage(portrait,0,0,w,h);dc.globalCompositeOperation="source-in";dc.fillStyle="#f5f6fa";dc.fillRect(0,0,w,h);dc.globalCompositeOperation="source-over";
+  const pitch=Math.max(5,Math.round(6.5*r*(b.h/700)));
+  for(let y=pitch/2;y<h;y+=pitch)for(let x=pitch/2;x<w;x+=pitch){const i=((y|0)*w+(x|0))*4;const a=id[i+3]/255;if(a<.3)continue;
+    const L=(.299*id[i]+.587*id[i+1]+.114*id[i+2])/255;const rad=pitch*.5*(.18+.82*(1-L))*a;
+    const col=hash(x|0,y|0)<.05?"#ff7a30":"#3b5bff";
+    for(const c of [dc,oc]){c.fillStyle=col;c.beginPath();c.arc(x,y,rad,0,7);c.fill()}}
+  S.data=data;S.dots=dots;S.r=r;
+  /* burn field */
+  const gw=Math.ceil(w/6),gh=Math.ceil(h/6);const g=new Float32Array(gw*gh);
+  for(let j=0;j<gh;j++)for(let i=0;i<gw;i++){const n=.5+.25*Math.sin(i*.31+j*.17)+.15*Math.sin(i*.07-j*.29+1.7)+.1*Math.sin((i+j)*.53);g[j*gw+i]=(j/gh)*.55+n*.45}
+  S.burn={g,gw,gh,cv:Object.assign(document.createElement("canvas"),{width:gw,height:gh}),gl:Object.assign(document.createElement("canvas"),{width:gw,height:gh})};
+  S.mask=mk();S.comp=mk();S.scan=mk();
+}
+function heroResize(){fitCanvas(hbg,1.5);fitCanvas(hfg,1.5);if(portrait.complete&&portrait.naturalWidth){S.box=heroBox();buildData()}}
+const toLocal=(nx,ny)=>{const b=S.box;const W=hero.clientWidth,H=hero.clientHeight;return[((nx+1)/2*W-b.x)*S.r,((ny+1)/2*H-b.y)*S.r]};
+addEventListener("pointermove",e=>{if(e.pointerType!=="mouse"||RM)return;const nx=e.clientX/innerWidth*2-1,ny=e.clientY/innerHeight*2-1;S.pointer={x:nx,y:ny};
+  if(!S.seen){S.seen=true;S.sm={x:nx,y:ny};S.last={x:nx,y:ny};S.trail=[]}},{passive:true});
+let hbgT0=performance.now();
+function heroFrame(now){
+  if(scrollY>innerHeight*1.15||!S.data)return;
+  const W=hero.clientWidth,H=hero.clientHeight;const t=(now-hbgT0)/1000;
+  /* background contours */
+  const r1=hbg.width/W,bc=hbg.getContext("2d");bc.setTransform(r1,0,0,r1,0,0);bc.clearRect(0,0,W,H);contours(bc,W,H,RM?1.5:t*1.66*.6,"#dfe3ee",1.2);
+  /* pointer */
+  S.sm.x+=(S.pointer.x-S.sm.x)*.17;S.sm.y+=(S.pointer.y-S.sm.y)*.17;
+  const step=Math.hypot(S.sm.x-S.last.x,S.sm.y-S.last.y);S.last={...S.sm};
+  const tgt=Math.min(1,step/.029);S.pace+=(tgt-S.pace)*(tgt>S.pace?.09:.205);
+  /* intro & rise */
+  if(S.riseAt){S.intro=RM?1:Math.min(1,(now-S.riseAt)/4000)}
+  let riseOff=0;if(!RM){if(!S.riseAt)riseOff=200;else{const u=Math.min(1,(now-S.riseAt)/2000);riseOff=200*(1-u)*(1-u)}}
+  const b=S.box,r=S.r,w=S.data.width,h=S.data.height;
+  const ox=b.x+S.sm.x*9,oy=b.y+riseOff+S.sm.y*6;
+  const fc=hfg.getContext("2d"),fr=hfg.width/W;fc.setTransform(fr,0,0,fr,0,0);fc.clearRect(0,0,W,H);
+  fc.drawImage(portrait,ox,oy,b.w,b.h);
+  /* trail history in local px */
+  const [lx,ly]=toLocal(S.sm.x,S.sm.y);S.trail.unshift([lx-(S.sm.x*9)*r,ly-(S.sm.y*6)*r]);if(S.trail.length>NS)S.trail.length=NS;
+  const mc=S.mask.getContext("2d");mc.setTransform(1,0,0,1,0,0);mc.clearRect(0,0,w,h);
+  /* burn */
+  const front=-0.06+smooth(.14,1,S.intro)*1.14;const burning=S.intro<1;
+  if(burning){const B=S.burn,ic=B.cv.getContext("2d"),gc=B.gl.getContext("2d");const im=ic.createImageData(B.gw,B.gh),gm=gc.createImageData(B.gw,B.gh);
+    for(let k=0;k<B.g.length;k++){const it=smooth(front-.035,front+.035,B.g[k]);im.data[k*4+3]=it*255;im.data[k*4]=im.data[k*4+1]=im.data[k*4+2]=255;
+      const ed=4*it*(1-it);gm.data[k*4]=255;gm.data[k*4+1]=122;gm.data[k*4+2]=48;gm.data[k*4+3]=ed*255}
+    ic.putImageData(im,0,0);gc.putImageData(gm,0,0);mc.imageSmoothingEnabled=true;mc.drawImage(B.cv,0,0,w,h)}
+  /* cursor trail */
+  const gate=smooth(.06,.21,S.pace);
+  if(S.intro>.3&&gate>0&&S.seen&&W>=1024){const R=Math.min(w,h)*.12*(.28+.72*S.pace);const taper=1.9*(1.6+(1.25-1.6)*S.pace);const span=Math.max(1,.64*(NS-1));
+    mc.globalAlpha=gate;mc.strokeStyle="#fff";mc.lineCap="round";
+    for(let i=0;i<Math.min(S.trail.length-1,span);i++){const wgt=Math.pow(1-i/span,taper);const a=S.trail[i],c=S.trail[i+1];
+      mc.lineWidth=2*R*wgt*(1+.12*Math.sin(t*3+i*.7));mc.beginPath();mc.moveTo(a[0],a[1]);mc.lineTo(c[0],c[1]);mc.stroke()}
+    mc.globalAlpha=1}
+  /* composite data layer */
+  const cc=S.comp.getContext("2d");cc.globalCompositeOperation="source-over";cc.clearRect(0,0,w,h);cc.drawImage(S.data,0,0);cc.globalCompositeOperation="destination-in";cc.drawImage(S.mask,0,0);cc.globalCompositeOperation="source-over";
+  fc.drawImage(S.comp,ox,oy,b.w,b.h);
+  if(burning){fc.globalCompositeOperation="lighter";fc.globalAlpha=.9;fc.drawImage(S.burn.gl,ox,oy,b.w,b.h);fc.drawImage(S.burn.gl,ox,oy,b.w,b.h);fc.globalAlpha=1;fc.globalCompositeOperation="source-over"}
+  /* scanning wave of dots */
+  if(!RM&&S.intro>=1){const sc=S.scan.getContext("2d");
+    for(let k=0;k<3;k++){const age=(t%1.2)+k*1.2;if(age>3.1)break;const cy=(-.25+(age/3.1)*1.5)*h;
+      sc.globalCompositeOperation="source-over";sc.clearRect(0,0,w,h);sc.drawImage(S.dots,0,0);sc.globalCompositeOperation="destination-in";
+      const gr=sc.createLinearGradient(0,cy-h*.15,0,cy+h*.15);gr.addColorStop(0,"rgba(0,0,0,0)");gr.addColorStop(.5,"rgba(0,0,0,1)");gr.addColorStop(1,"rgba(0,0,0,0)");sc.fillStyle=gr;sc.fillRect(0,0,w,h);
+      fc.globalAlpha=.22;fc.drawImage(S.scan,ox,oy,b.w,b.h);fc.globalAlpha=1}}
+}
+
+/* ───────────── impact map ───────────── */
+const MOR=[[-5.8,35.78],[-5.3,35.6],[-4.4,35.15],[-3.9,35.25],[-2.95,35.25],[-2.2,35.1],[-1.75,34.75],[-1.65,34.1],[-1.2,32.6],[-1.2,32.1],[-2.6,32.0],[-3.7,31.6],[-4.9,30.8],[-6.0,30.0],[-7.6,29.5],[-8.67,28.7],[-8.67,27.67],[-8.67,26.0],[-12.0,26.0],[-12.0,23.45],[-13.1,23.0],[-13.0,21.33],[-16.95,21.33],[-17.05,20.8],[-16.9,21.6],[-16.5,22.3],[-15.95,23.7],[-15.0,24.7],[-14.5,26.13],[-13.6,26.8],[-13.4,27.1],[-12.92,27.94],[-11.5,28.3],[-11.1,28.44],[-10.2,29.3],[-9.65,30.0],[-9.6,30.42],[-9.85,31.0],[-9.77,31.5],[-9.24,32.3],[-8.5,33.25],[-7.6,33.6],[-6.84,34.02],[-6.6,34.3],[-6.15,35.2],[-6.03,35.47]];
+const CITIES=[[-8.0,31.63],[-11.67,26.74],[-6.84,34.02],[-12.92,27.94],[-13.2,27.15]];
+const ROUTE=[0,1,2,3,4,1];
+const FW=1440,FH=800;
+const proj=([lo,la])=>{const s=47.4;return[620+(lo+17.3)*s*.88,40+(35.95-la)*s]};
+const polyP=MOR.map(proj);
+const inPoly=(x,y)=>{let c=false;for(let i=0,j=polyP.length-1;i<polyP.length;j=i++){const [xi,yi]=polyP[i],[xj,yj]=polyP[j];if(((yi>y)!==(yj>y))&&x<(xj-xi)*(y-yi)/(yj-yi)+xi)c=!c}return c};
+const PITCH=8.2;const DOTS=[];for(let y=30;y<FH-10;y+=PITCH)for(let x=560;x<FW;x+=PITCH)if(inPoly(x,y))DOTS.push([x,y,Math.round((x-560)/PITCH),Math.round((y-30)/PITCH)]);
+const cityP=CITIES.map(proj);
+/* route polyline */
+const RP=[];{const pts=ROUTE.map(i=>cityP[i]);for(let k=0;k<pts.length-1;k++){const [ax,ay]=pts[k],[bx,by]=pts[k+1];const mx=(ax+bx)/2,my=(ay+by)/2,dx=bx-ax,dy=by-ay;const len=Math.hypot(dx,dy);const bend=(k%2?-1:1)*Math.min(90,len*.22);const cx=mx-dy/len*bend,cy=my+dx/len*bend;
+  const n=Math.max(8,Math.round(len/3));for(let s=k?1:0;s<=n;s++){const u=s/n;RP.push([(1-u)**2*ax+2*(1-u)*u*cx+u*u*bx,(1-u)**2*ay+2*(1-u)*u*cy+u*u*by])}}}
+const CUM=[0];for(let i=1;i<RP.length;i++)CUM.push(CUM[i-1]+Math.hypot(RP[i][0]-RP[i-1][0],RP[i][1]-RP[i-1][1]));const TOT=CUM[CUM.length-1];
+const stopD=[];{let k=0;const pts=ROUTE.map(i=>cityP[i]);pts.forEach((p,i)=>{let best=0,bd=1e9;for(let j=0;j<RP.length;j++){const d=Math.hypot(RP[j][0]-p[0],RP[j][1]-p[1]);if(d<bd){bd=d;best=j}}stopD.push({d:i===pts.length-1?TOT:CUM[best],c:ROUTE[i]})})}
+const mapCv=$("#map"),M={lap:0,heat:1,armed:false,ptr:{x:0,y:0,on:false},spread:0,lit:new Float32Array(DOTS.length)};
+let mapFit={s:1,tx:0,ty:0};
+let baked=null;
+function mapResize(){const r=fitCanvas(mapCv,coarse?1:2);const W=mapCv.clientWidth,H=mapCv.clientHeight;
+  if(W>=1024){const s=Math.max(W/FW,H/FH);mapFit={s,tx:(W-FW*s)/2,ty:(H-FH*s)/2}}
+  else{const bx=600,bw=720;const s=Math.min(W/bw,H*.8/FH);mapFit={s,tx:(W-bw*s)/2-bx*s,ty:(H-FH*s)/2+30}}
+  baked=document.createElement("canvas");baked.width=mapCv.width;baked.height=mapCv.height;const c=baked.getContext("2d");c.setTransform(r*mapFit.s,0,0,r*mapFit.s,r*mapFit.tx,r*mapFit.ty);
+  c.fillStyle="#3a4269";c.beginPath();for(const [x,y] of DOTS){c.moveTo(x+1.7,y);c.arc(x,y,1.7,0,7)}c.fill()}
+const distAt=u=>{const e=u<.5?2*u*u:1-(-2*u+2)**2/2;return e*TOT};
+function mapFrame(now){if(!inView.get(mapCv)||!baked)return;
+  const r=mapCv.width/mapCv.clientWidth,c=mapCv.getContext("2d");c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,mapCv.width,mapCv.height);c.drawImage(baked,0,0);
+  c.setTransform(r*mapFit.s,0,0,r*mapFit.s,r*mapFit.tx,r*mapFit.ty);
+  const hub=cityP[1];
+  /* grid axes crawl */
+  c.save();c.strokeStyle="#2c3458";c.lineWidth=1.2;c.setLineDash([6.8,4.7]);c.lineDashOffset=-((now/7000)%1)*11.5;c.beginPath();
+  [hub[0]-260,hub[0],hub[0]+430].forEach(x=>{c.moveTo(x,-2000);c.lineTo(x,3000)});c.moveTo(-3000,hub[1]);c.lineTo(4000,hub[1]);c.stroke();c.restore();
+  c.strokeStyle="#2c3458";c.lineWidth=1.7;c.beginPath();c.arc(hub[0],hub[1],39,0,7);c.stroke();
+  c.strokeStyle="#1a2044";c.lineWidth=1.2;[200,249].forEach(rr=>{c.beginPath();c.arc(hub[0],hub[1],rr,0,7);c.stroke()});
+  const pv=((now%4200)/4200),pe=1-(1-pv)**2;c.strokeStyle=`rgb(255 122 48 / ${.4*(1-pe)**2})`;c.beginPath();c.arc(hub[0],hub[1],6+pe*48,0,7);c.stroke();
+  c.fillStyle="#f5f6fa";c.beginPath();c.arc(hub[0],hub[1],4,0,7);c.fill();
+  /* reticle chequer */
+  if(M.armed){const p=M.ptr;M.spread+=((p.on?1:0)-M.spread)*.12;
+    if(M.spread>.01){const ci=Math.round((p.x-560)/PITCH),cj=Math.round((p.y-30)/PITCH);const reach=240*M.spread;
+      for(const [x,y,i,j] of DOTS){let v=0;if(j===cj&&Math.abs(x-p.x)<reach)v=(1-Math.abs(x-p.x)/reach)*.82;if(i===ci&&Math.abs(y-p.y)<reach)v=Math.max(v,(1-Math.abs(y-p.y)/reach)*.82);
+        const d=Math.hypot(x-p.x,y-p.y);if(d<34)v=Math.max(v,(1-d/34)**2*.95);v*=M.spread;if(v<.3)continue;
+        c.fillStyle="#0b1026";c.fillRect(x-2.4,y-2.4,4.8,4.8);if((i+j)&1)continue;const side=PITCH*(.7+.3*Math.min(1,(v-.3)/.7));c.fillStyle=v>.8?"#fff":v>.5?"#ffb58a":"#ff7a30";c.fillRect(x-side/2,y-side/2,side,side)}}}
+  /* route */
+  const dist=distAt(M.lap);let n=0;while(n<CUM.length&&CUM[n]<=dist)n++;
+  if(n>1){const pts=RP.slice(0,n);c.lineCap="round";c.lineJoin="round";
+    c.save();c.globalCompositeOperation="lighter";c.strokeStyle="rgb(255 122 48 / .07)";c.lineWidth=15;line(c,pts);c.strokeStyle="rgb(255 122 48 / .12)";c.lineWidth=7;line(c,pts);c.restore();
+    c.strokeStyle="#ff7a30";c.lineWidth=3.2;line(c,pts);
+    const head=Math.max(0,pts.length-70);if(M.heat>0){const tip=pts[pts.length-1];const g=c.createLinearGradient(pts[head][0],pts[head][1],tip[0],tip[1]);g.addColorStop(0,"rgb(255 201 77 / 0)");g.addColorStop(1,`rgb(255 255 255 / ${.95*M.heat})`);c.strokeStyle=g;c.lineWidth=1.4;line(c,pts.slice(Math.max(0,pts.length-30)));
+      c.save();c.globalCompositeOperation="lighter";const sp=c.createRadialGradient(tip[0],tip[1],0,tip[0],tip[1],14);sp.addColorStop(0,`rgb(255 255 255 / ${.85*M.heat})`);sp.addColorStop(.35,`rgb(255 201 77 / ${.4*M.heat})`);sp.addColorStop(1,"rgb(255 122 48 / 0)");c.fillStyle=sp;c.beginPath();c.arc(tip[0],tip[1],14,0,7);c.fill();c.restore()}}
+  /* markers & labels */
+  const labels=t("cities");c.font=`500 ${Math.max(13,11/mapFit.s).toFixed(1)}px ${lang==="ar"?"Readex Pro":"Space Grotesk"}`;c.textBaseline="middle";
+  const seen=new Set();stopD.forEach((s,k)=>{if(seen.has(s.c))return;seen.add(s.c);const [x,y]=cityP[s.c];const lit=dist>=s.d-1;
+    c.save();c.translate(x,y);c.rotate(Math.PI/4);c.fillStyle=lit?"#ff7a30":"#262d52";c.fillRect(-5,-5,10,10);c.restore();
+    if(lit){const age=Math.min(1,(dist-s.d)/90);if(age<1){c.strokeStyle=`rgb(255 201 77 / ${(1-age)*.6})`;c.lineWidth=1;c.beginPath();c.arc(x,y,9+age*20,0,7);c.stroke()}
+      const right=s.c!==3&&s.c!==4;c.fillStyle="#fff";c.textAlign=right?"left":"right";c.fillText((lang==="ar"?labels[s.c]:labels[s.c].toUpperCase()),x+(right?14:-14),y)}});
+}
+const line=(c,p)=>{c.beginPath();c.moveTo(p[0][0],p[0][1]);for(let i=1;i<p.length;i++)c.lineTo(p[i][0],p[i][1]);c.stroke()};
+vIO.observe(mapCv);
+const lapIO=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;lapIO.disconnect();
+  if(RM){M.lap=1;M.heat=0;M.armed=true;return}const t0=performance.now();
+  const un=subscribe(now=>{const u=Math.min(1,(now-t0)/6000);M.lap=u;if(u>=1){un();const t1=performance.now();const un2=subscribe(n2=>{const v=Math.min(1,(n2-t1)/800);M.heat=1-(1-(1-v)**3);if(v>=1){un2();M.heat=0;M.armed=true}})}})},{threshold:.35});
+lapIO.observe($("#impact .stage"));
+addEventListener("pointermove",e=>{if(e.pointerType!=="mouse")return;const r=mapCv.getBoundingClientRect();const inside=e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom;
+  M.ptr.on=inside;if(inside){M.ptr.x=(e.clientX-r.left-mapFit.tx)/mapFit.s;M.ptr.y=(e.clientY-r.top-mapFit.ty)/mapFit.s}},{passive:true});
+document.addEventListener("pointerleave",()=>M.ptr.on=false);
+subscribe(mapFrame,()=>16);
+/* globe meridian */
+{const m=$("#meridian"),t0=performance.now();subscribe(now=>{if(!inView.get(mapCv))return;const turn=((now-t0)%10000)/10000*Math.PI*2;m.setAttribute("rx",Math.max(.5,Math.abs(Math.cos(turn))*18))},()=>30)}
+
+/* ───────────── rail ───────────── */
+const rail=$("#rail");let railRest=1;
+function layoutRail(){const box=rail.parentNode;const H=box.clientHeight;if(!H)return;
+  const rows=$$(".row");const last=rows[rows.length-1];if(!last)return;
+  railRest=Math.max(10,last.offsetTop+last.offsetHeight/2-50);
+  rail.setAttribute("viewBox",`0 0 16 ${H}`);
+  const sz=innerWidth<1024?20:9;
+  rail.innerHTML=`<path d="M8 0V98" stroke="rgb(255 255 255 / .2)"/><path d="M8 102V${railRest}" stroke="rgb(255 255 255 / .2)" stroke-dasharray="6 6"/><rect id="rprog" x="7.5" width="1" y="0" height="0" fill="#fff"/><rect id="rmark" x="${-sz/2}" y="${-sz/2}" width="${sz}" height="${sz}" fill="#ff7a30"/>`}
+let railP=0;
+function railUpdate(){const box=rail.parentNode;const r=box.getBoundingClientRect();if(!r.height)return;
+  const start=r.top-innerHeight/2,end=r.bottom-innerHeight,len=Math.abs(start-end)||1;const p=Math.min(1,Math.max(0,1-(start+len)/len));
+  railP+=(p-railP)*.18;const run=railP*railRest;const pr=$("#rprog"),mk=$("#rmark");if(pr){pr.setAttribute("height",run);mk.setAttribute("transform",`translate(8 ${run}) rotate(${run/railRest*1800})`)}}
+subscribe(railUpdate,()=>16);
+
+/* ───────────── scroll work: stack recede, parallax, seams ───────────── */
+const layers=$$(".layer").filter(l=>!l.classList.contains("last")).map(l=>({inner:$(".inner",l),shade:$(".shade",l),next:l.nextElementSibling}));
+function scrollWork(){const vh=innerHeight||1,phone=innerWidth<640;
+  for(const {inner,shade,next} of layers){const p=Math.min(1,Math.max(0,1-next.getBoundingClientRect().top/vh));
+    inner.style.transform=p>0&&!phone?`scale(${1-.1*p})`:"";shade.style.opacity=.55*p;inner.style.visibility=p>=1?"hidden":"visible"}
+  seams.forEach(cv=>{const r=cv.getBoundingClientRect();const start=r.top-vh,len=vh;const p=Math.min(1,Math.max(0,-start/len));if(cv._p!==p){cv._p=p;drawSeam(cv,p)}});
+  $$("[data-par]").forEach(el=>{const row=el.closest(".row,.ffig");if(!row)return;const r=row.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;
+    const p=Math.min(1,Math.max(0,(vh-r.top)/(vh+r.height)));const tr=+el.dataset.par;el.style.top=`${((1-2*p)*tr/1440*100).toFixed(3)}cqw`});
+  $$(".plate2 .slot").forEach(s=>{const r=s.closest(".plate2").getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const p=Math.min(1,Math.max(0,(vh-r.top)/(vh/2)));s.style.top=`${-10+10*p}%`});
+  const fig=$("#figpin"),fr=$("#contact").getBoundingClientRect();{const start=fr.top-vh,end=fr.bottom-vh;const p=Math.min(1,Math.max(0,(0-start)/((end-start)||1)));fig.style.top=`${((1-p)*60/1440*100).toFixed(3)}cqw`}
+  const ff=$(".ffig .pin");if(ff){const r=$("#field").getBoundingClientRect();const p=Math.min(1,Math.max(0,(vh-r.top)/(vh+r.height)));ff.style.top=`${(-p*48/1440*100).toFixed(3)}cqw`}
+}
+let sq=0;addEventListener("scroll",()=>{if(!sq)sq=requestAnimationFrame(()=>{sq=0;scrollWork()})},{passive:true});
+$$(".ffig .pin").forEach(el=>{});
+
+/* group triggers */
+const gIO=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;gIO.unobserve(e.target);playGroup(e.target.dataset.trig)}),{rootMargin:"0% 0% -30% 0%"});
+[["#impact","impact"],["#journey","journey"],["#field","field"],["#contact","foot"]].forEach(([s,g])=>{const el=$(s);el.dataset.trig=g;gIO.observe(el)});
+stripIO.observe($("#strip"));
+
+/* ───────────── menu sheet ───────────── */
+const sheet=$("#sheet");let lenis=null;
+const openSheet=()=>{sheet.classList.add("open");document.documentElement.style.overflow="hidden";lenis&&lenis.stop();
+  spring(0,1,[190,26],0,p=>sheet.style.opacity=Math.min(1,p));$$("nav a",sheet).forEach((a,i)=>spring(0,1,ITEM,120+i*55,p=>{a.style.opacity=Math.min(1,p);a.style.transform=`translateY(${(1-p)*.75}rem)`}));$(".x",sheet).focus()};
+const closeSheet=()=>{sheet.classList.remove("open");sheet.style.opacity=0;document.documentElement.style.overflow="";lenis&&lenis.start();$$("nav a",sheet).forEach(a=>{a.style.opacity=0})};
+$(".burger").addEventListener("click",openSheet);$(".x",sheet).addEventListener("click",closeSheet);
+$$("[data-close]",sheet).forEach(a=>a.addEventListener("click",()=>setTimeout(closeSheet,0)));
+addEventListener("keydown",e=>{if(e.key==="Escape"&&sheet.classList.contains("open"))closeSheet()});
+addEventListener("resize",()=>{if(innerWidth>=1280&&sheet.classList.contains("open"))closeSheet()});
+
+/* anchors */
+document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute("href");const el=id==="#hero"?document.body:$(id);if(!el)return;e.preventDefault();
+  if(lenis)lenis.scrollTo(id==="#hero"?0:el,{offset:0});else (id==="#hero"?scrollTo({top:0,behavior:RM?"auto":"smooth"}):el.scrollIntoView({behavior:RM?"auto":"smooth"}))});
+/* copy buttons */
+document.addEventListener("click",async e=>{const b=e.target.closest(".copybtn");if(!b)return;try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent=t("copied")}catch(err){const s=getSelection(),rg=document.createRange();rg.selectNodeContents(b.previousElementSibling.querySelector(".v"));s.removeAllRanges();s.addRange(rg)}setTimeout(()=>b.textContent=t("copy"),1600)});
+
+/* ───────────── boot / veil ───────────── */
+applyLang(true);
+const veil=$("#veil"),fill=$("#veil .sil i:last-child"),meter=$("#veil .meter i"),vn=$("#veil .vn");
+let prog=spring(0,.7,[10,30],0,p=>{fill.style.transform=`scaleY(${p})`;meter.style.transform=`scaleX(${p})`});
+spring(0,1,[110,26],260,p=>{vn.style.opacity=Math.min(1,p);vn.style.transform=`translateY(${(1-p)*.6}rem)`});
+veil.setAttribute("aria-label",t("loading"));
+const ready=Promise.all([new Promise(r=>{if(portrait.complete&&portrait.naturalWidth)r();else{portrait.onload=r;portrait.onerror=r}}),document.fonts?document.fonts.ready.catch(()=>{}):0,new Promise(r=>setTimeout(r,500))]);
+const timeout=new Promise(r=>setTimeout(r,6000));
+Promise.race([ready,timeout]).then(()=>{
+  heroResize();S.ready=true;S.readyAt=performance.now();
+  if(prog&&anims.has(prog)){prog.to=1;prog.k=170;prog.c=26}else{spring(prog?prog.x:1,1,[170,26],0,p=>{fill.style.transform=`scaleY(${p})`;meter.style.transform=`scaleX(${p})`})}
+  veil.setAttribute("aria-label",t("loaded"));veil.style.pointerEvents="none";
+  setTimeout(()=>{spring(1,0,[140,26],0,p=>{$(".vc",veil).style.opacity=p;$(".vc",veil).style.transform=`translateY(${(1-p)*-.75}rem)`;$(".meter",veil).style.opacity=p})},RM?0:350);
+  setTimeout(()=>{S.riseAt=performance.now();playGroup("hero");spring(1,0,[70,24],0,p=>veil.style.opacity=p,()=>veil.remove())},RM?0:350+670);
+});
+subscribe(heroFrame,()=>0);
+let rq=0;addEventListener("resize",()=>{if(rq)return;rq=requestAnimationFrame(()=>{rq=0;heroResize();mapResize();layoutRail();seams.forEach(c=>{c._p=-1});scrollWork()})});
+document.addEventListener("relang",()=>{});
+mapResize();scrollWork();
+/* lenis */
+if(!RM)import("https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.mjs").then(m=>{lenis=new m.default({smoothWheel:true});subscribe(time=>lenis.raf(time),()=>0);lenis.on("scroll",scrollWork)}).catch(()=>{});
+}
+</script>
+</body>
+</html>
